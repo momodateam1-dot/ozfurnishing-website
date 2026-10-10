@@ -4,20 +4,20 @@ var CONTACT_EMAIL = '807735000@qq.com';
 
 /* Where the enquiry form posts.
  *
- * FORMSPREE (current setup): paste the endpoint Formspree gives you, e.g.
- *   var INQUIRY_ENDPOINT = 'https://formspree.io/f/xvovbxyz';
- * Free tier is 50 submissions / month. Past that, it starts returning errors
- * and the form quietly falls back to the email / WhatsApp / WeChat panel, so
- * a visitor is never stranded.
+ * WEB3FORMS (current setup): the access key below is a public identifier, not
+ * a secret - it is safe in client-side code and simply routes to our inbox.
+ * Free tier is 250 submissions / month.
  *
  * SELF-HOSTED (optional): if you ever bind an R2 bucket to the Pages
- * Function, set this back to '/api/inquiry'. Nothing else needs to change.
+ * Function, set INQUIRY_ENDPOINT back to '/api/inquiry'. Nothing else needs
+ * to change.
  */
-var INQUIRY_ENDPOINT = 'https://formspree.io/f/REPLACE_ME';
+var INQUIRY_ENDPOINT = 'https://api.web3forms.com/submit';
+var WEB3FORMS_KEY = '122af944-77ab-49a7-b4a0-fb440fa896ad';
 
-/* True for absolute third-party endpoints (Formspree), false for our own
- * Pages Function. Controls which headers and body encoding we use. */
-var ENDPOINT_IS_FORMSPREE = /^https?:\/\//i.test(INQUIRY_ENDPOINT);
+/* Absolute third-party endpoint (Web3Forms) vs our own Pages Function.
+ * Controls which fields and headers we send. */
+var ENDPOINT_IS_FORM_SERVICE = /^https?:\/\//i.test(INQUIRY_ENDPOINT);
 
 /* Clipboard helper: async API with a legacy execCommand fallback. */
 function copyText(text) {
@@ -266,17 +266,17 @@ document.addEventListener('DOMContentLoaded', function () {
       return 'We could not record your enquiry automatically. Your details are ready below - send them by email or copy them into WhatsApp or WeChat.';
     }
 
-    // Formspree wants a JSON body and answers with JSON only when we ask for
-    // it via Accept. Our own Pages Function wants the same shape, so the only
-    // difference is the few underscore-prefixed fields Formspree understands.
+    // Web3Forms takes the access key in the body and understands a handful of
+    // reserved names. Our own Pages Function wants the plain values, so the
+    // payload differs only by these extra keys.
     function payloadFor(values, draft) {
-      if (!ENDPOINT_IS_FORMSPREE) return values;
-      var out = {};
+      if (!ENDPOINT_IS_FORM_SERVICE) return values;
+      var out = { access_key: WEB3FORMS_KEY };
       FIELDS.forEach(function (k) { out[k] = values[k]; });
-      out._subject = draft.subject;
-      out._replyto = values.email;
-      out._gotcha = '';           // honeypot: must stay empty
-      out._format = 'plain';      // readable plain-text notification
+      out.subject = draft.subject;       // email subject line
+      out.email = values.email;          // sets the reply-to address
+      out.replyto = CONTACT_EMAIL;
+      out.botcheck = '';                 // honeypot: must stay empty
       return out;
     }
 
@@ -290,7 +290,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // Honeypot tripped -> it is a bot. Show the same success a human would
       // see so it has nothing to learn from the response, and send nothing.
-      var gotcha = form.querySelector('[name="_gotcha"]');
+      var gotcha = form.querySelector('[name="botcheck"]') ||
+                   form.querySelector('[name="_gotcha"]');
       if (gotcha && gotcha.value) {
         setMsg('Thank you - your enquiry has been received. Our team will reply within one business day.', 'ok');
         form.reset();
@@ -317,11 +318,18 @@ document.addEventListener('DOMContentLoaded', function () {
           return;
         }
 
-        // Formspree answers 200 on success; our own function answers {ok:true}.
-        var good = res.ok && (!ENDPOINT_IS_FORMSPREE || !data || data.error === undefined);
+        // Web3Forms answers {success:true, body:{message:...}}.
+        // Our own Pages Function answers {ok:true}.
+        var good;
+        if (ENDPOINT_IS_FORM_SERVICE) {
+          good = res.ok && data && data.success !== false;
+        } else {
+          good = res.ok && data && data.ok;
+        }
         if (!good) {
           var serverError = '';
-          if (data && data.error) serverError = data.error;
+          if (data && data.body && data.body.message) serverError = data.body.message;
+          else if (data && data.error) serverError = data.error;
           else if (data && data.errors && data.errors.length) {
             serverError = data.errors.map(function (e) { return e.message || e; }).join(' ');
           }

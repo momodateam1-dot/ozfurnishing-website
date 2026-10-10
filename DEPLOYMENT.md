@@ -60,53 +60,49 @@ Pages 已连接 GitHub 仓库，请在 **Settings → Builds & deployments** 确
 
 ## 三、询盘接收方案
 
-### ✅ 推荐：Formspree（3 分钟，免后端）
+### ✅ 已接入：Web3Forms（免后端，邮件直达）
 
-海外独立站最通用的无服务器表单方案。免费额度 **50 条 / 月**，自带防垃圾过滤，
-提交后 3~5 秒邮件直达你的收件箱，直接点「回复」就能联系客户。
+免费额度 **250 条 / 月**，无需信用卡。提交后 3~5 秒邮件到你的收件箱，
+直接点「回复」即可联系客户（Reply-To 已自动设为客户邮箱）。
 
-**1. 获取端点**
+**当前状态：已配置完成，无需再做任何操作。**
 
-1. 打开 https://formspree.io 注册
-2. **New Form** → 名称填 `OZ Website Sourcing Inquiry`
-3. 接收邮箱填你的真实邮箱（建议 `807735000@qq.com`）
-4. 创建后会得到一个端点，形如 `https://formspree.io/f/xvovbxyz`
+| 项 | 值 |
+|---|---|
+| 端点 | `https://api.web3forms.com/submit` |
+| Access Key | `122af944-77ab-49a7-b4a0-fb440fa896ad` |
+| 代码位置 | `assets/main.js` 顶部的 `INQUIRY_ENDPOINT` 与 `WEB3FORMS_KEY` |
 
-**2. 填进代码**
+> 这个 Access Key 是**公开标识符，不是密钥**。它只是把提交路由到你的邮箱，
+> 放在前端代码里是安全的（官方文档明确说明）。
+> 想进一步防滥用，可在 Web3Forms 后台开启 **Allowed Domains**，只允许
+> `ozfurnishing.com` 提交。
 
-打开 `assets/main.js` 最顶部，改这一行：
+**换邮箱或换表单时**：去 https://web3forms.com 后台新建一个表单，把新的
+Access Key 替换掉 `WEB3FORMS_KEY` 的值即可，其他代码不用动。
 
-```js
-var INQUIRY_ENDPOINT = 'https://formspree.io/f/xvovbxyz';   // 换成你自己的
-```
+**验收方式**
 
-就这一处，其他地方都不用动。
+去网站填一次表单提交：
 
-**3. 推送**
+- 出现**绿色**提示「Thank you - your enquiry has been received」→ 提交成功
+- 收件箱收到询盘邮件 → 全链路打通
 
-双击 `push.cmd`，Cloudflare 自动重新部署，几十秒生效。
+> 💡 邮件没到？先查 Web3Forms 后台的 **Submissions**（所有提交都有记录），
+> 再去垃圾箱找找，并把 `no-reply@web3forms.com` 加进白名单。
 
-**4. 验收**
+**已内置的防垃圾**
 
-去网站填一次表单提交，出现**绿色**提示「Thank you - your enquiry has been received」，
-同时邮箱收到询盘邮件 —— 成功。
-
-> 💡 提示：如果邮箱里没收到，先看 Formspree 后台的 **Submissions**，
-> 那里有所有提交记录。另外记得去邮箱把 Formspree 加白名单，避免进垃圾箱。
->
-> ⚠️ 免费额度用完后（50 条 / 月），表单会自动切换到「选渠道发送」的降级面板，
-> 客户仍可通过邮件 / WhatsApp / 微信联系你，**不会丢单**。
-> 量大了再升级 Formspree 套餐（约 $10/月，1000 条）。
-
-**已内置的防垃圾**：表单里有一个隐藏的 `_gotcha` 蜜罐字段，
-机器人填了就会被静默丢弃；真人看不见也填不到。
+- 隐藏的 `botcheck` 蜜罐字段 —— 机器人填了就静默丢弃，且返回与真人相同的成功提示
+- Web3Forms 服务端自带关键字黑名单、一次性邮箱拦截
+- 免费额度用满后返回 429，前端提示「询盘较多」并切到降级面板，**不丢单**
 
 ---
 
-### 备选：自建 Pages Function + R2（可选，需绑信用卡）
+### 备选：自建 Pages Function + R2（需绑信用卡）
 
 开通 R2 需要先绑定信用卡（Cloudflare 的风控要求，即使只用免费额度也要绑）。
-如果不想绑卡，就用上面的 Formspree 方案，效果一样。
+把 `INQUIRY_ENDPOINT` 改回 `'/api/inquiry'` 即可启用，代码无需其他改动。
 
 **Settings → Environment variables**（Production 与 Preview 都加）：
 
