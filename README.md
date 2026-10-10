@@ -38,7 +38,7 @@
 │  └─ switch-cdn.py      本地图片 ↔ R2 CDN 域名切换
 ├─ _headers              缓存与安全响应头
 ├─ _redirects            www / http → HTTPS 主域
-├─ wrangler.toml         本地 `wrangler pages dev` 配置
+├─ tools/wrangler.pages.toml  本地 `wrangler pages dev` 配置（**不能放根目录**）
 ├─ robots.txt
 ├─ sitemap.xml
 └─ r2-cors.json          oz-assets 桶的 CORS 策略模板
@@ -51,8 +51,16 @@
 python -m http.server 8080
 
 # 完整预览（含 /api/inquiry，需要 R2 绑定）
+cp tools/wrangler.pages.toml wrangler.toml   # 临时放回根目录
 npx wrangler pages dev .
+rm wrangler.toml                             # 用完删掉
 ```
+
+> ⚠️ **`wrangler.toml` 必须留在 `tools/` 里，不能放在仓库根目录。**
+> 根目录一旦存在 wrangler 配置文件，Cloudflare 会把这个纯静态站当成
+> 「需要构建过程的 Worker 项目」，网页直传时直接报错：
+> *「此上传程序暂不支持需要构建过程的项目。您似乎正在尝试上传带有 wrangler 配置文件的项目」*。
+> 删掉它之后，Pages 会正常把根目录当静态产物发布。
 
 > 图片使用根相对路径 `/assets/img/...`，所以必须通过 HTTP 服务器访问，直接双击 `index.html`（`file://`）图片会加载不到。
 

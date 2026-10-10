@@ -1,0 +1,24 @@
+# Local development config for `wrangler pages dev .`
+# Production values (env vars, R2 binding) are set in the Cloudflare Pages dashboard.
+#
+# NOTE: this file deliberately lives in tools/ and NOT in the repo root.
+# A wrangler.toml (or wrangler.json/jsonc) in the repository root makes
+# Cloudflare treat the project as a build-based Worker and refuse a direct
+# static upload with:
+#   "the uploader does not support projects requiring a build step ...
+#    you appear to be uploading a project with a wrangler config file"
+# To use it locally, copy it back to the root for the session, then remove it.
+#
+#   cp tools/wrangler.pages.toml wrangler.toml   # only while developing
+#
+name = "ozfurnishing-website"
+compatibility_date = "2026-10-10"
+pages_build_output_dir = "."
+
+# Private bucket for inquiry submissions. Never expose this one publicly.
+[[r2_buckets]]
+binding = "INQUIRY_BUCKET"
+bucket_name = "oz-inquiries"
+
+[vars]
+NOTIFICATION_EMAIL_TO = "807735000@qq.com"
