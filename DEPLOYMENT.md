@@ -40,13 +40,21 @@ Pages 已连接 GitHub 仓库，请在 **Settings → Builds & deployments** 确
 
 | 项 | 值 |
 |---|---|
-| Framework preset | **None** |
-| Build command | 留空 |
-| Build output directory | `/` （根目录） |
+| Framework preset | **None**（从下拉框选择，不要手打） |
+| Build command | **`exit 0`** |
+| Build output directory | 留空 |
 | Root directory | 留空 |
 | Production branch | `main` |
 
-> 如果之前填过子目录路径（如 `OZ_International_Trading_Website_v3.0/...`），必须清空，否则部署会失败。
+**Build command 必须填 `exit 0`，不能留空。** 这是 Cloudflare 官方文档对「不使用框架预设」项目的明确要求。
+
+> ⚠️ 常见错误：填 `npx wrangler deploy --assets <dir>`。这是 **Workers** 项目的命令，
+> 用在 Pages 项目上会报
+> `It looks like you've run a Workers-specific command in a Pages project`。
+> 本站点是纯静态站，没有构建步骤 —— HTML/CSS/JS 已经是成品，直接发布根目录即可。
+>
+> ⚠️ 如果之前填过子目录路径（如 `OZ_International_Trading_Website_v3.0/...`），
+> 必须清空 —— 该嵌套目录已在本项目中扁平化，已不存在。
 
 ---
 

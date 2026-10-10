@@ -27,3 +27,6 @@ Thumbs.db
 # Temp build helpers
 _tmp_*.py
 _tmp_*.js
+
+# Local convenience script (machine-specific git path)
+push.cmd
