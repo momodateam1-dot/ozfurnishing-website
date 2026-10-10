@@ -1,0 +1,4 @@
+# Canonical host: apex only (no www duplication)
+https://www.ozfurnishing.com/*  https://ozfurnishing.com/:splat  301
+http://www.ozfurnishing.com/*   https://ozfurnishing.com/:splat  301
+http://ozfurnishing.com/*       https://ozfurnishing.com/:splat  301

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<rect width="64" height="64" fill="#090a09"/>
+<rect x="5" y="5" width="54" height="54" fill="none" stroke="#c6a76b" stroke-width="2"/>
+<text x="32" y="41" text-anchor="middle" font-family="Georgia,'Times New Roman',serif"
+ font-size="28" fill="#e0c991" letter-spacing="-1">OZ</text>
+</svg>

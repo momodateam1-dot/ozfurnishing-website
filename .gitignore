@@ -1,0 +1,29 @@
+# Cloudflare / Wrangler
+.wrangler/
+.mf/
+functions/**/*.js.map
+
+# Node
+node_modules/
+package-lock.json
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Local tooling
+.env
+.env.*
+!.env.example
+.dev.vars
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Temp build helpers
+_tmp_*.py
+_tmp_*.js
