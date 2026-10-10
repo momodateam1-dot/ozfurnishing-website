@@ -34,3 +34,6 @@ push_api.cmd
 push_api.py
 .gh_token
 .gh_remote_head
+
+# One-off scripts written while working on the site (never committed)
+_*.py
