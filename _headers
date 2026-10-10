@@ -20,6 +20,17 @@
 /assets/*
   Cache-Control: public, max-age=604800, stale-while-revalidate=86400
 
+# --- code must ship fast ---
+# JS and CSS keep the same URL across deploys, so a 7-day browser cache would
+# keep serving yesterday's bug for a week. Five minutes is long enough to save
+# repeat downloads and short enough that a fix is visible on the next visit.
+# These come last so they override the rule above.
+/assets/*.js
+  Cache-Control: public, max-age=300, must-revalidate
+
+/assets/*.css
+  Cache-Control: public, max-age=300, must-revalidate
+
 # --- API: never cache ---
 /api/*
   Cache-Control: no-store
