@@ -1,7 +1,23 @@
 /* OZ International - site interactions */
 
 var CONTACT_EMAIL = '807735000@qq.com';
-var INQUIRY_ENDPOINT = '/api/inquiry';
+
+/* Where the enquiry form posts.
+ *
+ * FORMSPREE (current setup): paste the endpoint Formspree gives you, e.g.
+ *   var INQUIRY_ENDPOINT = 'https://formspree.io/f/xvovbxyz';
+ * Free tier is 50 submissions / month. Past that, it starts returning errors
+ * and the form quietly falls back to the email / WhatsApp / WeChat panel, so
+ * a visitor is never stranded.
+ *
+ * SELF-HOSTED (optional): if you ever bind an R2 bucket to the Pages
+ * Function, set this back to '/api/inquiry'. Nothing else needs to change.
+ */
+var INQUIRY_ENDPOINT = 'https://formspree.io/f/REPLACE_ME';
+
+/* True for absolute third-party endpoints (Formspree), false for our own
+ * Pages Function. Controls which headers and body encoding we use. */
+var ENDPOINT_IS_FORMSPREE = /^https?:\/\//i.test(INQUIRY_ENDPOINT);
 
 /* Clipboard helper: async API with a legacy execCommand fallback. */
 function copyText(text) {
@@ -243,11 +259,25 @@ document.addEventListener('DOMContentLoaded', function () {
     // Never surface that plumbing detail to a buyer - turn it into the same
     // "pick a channel" step they would see on any other failure.
     function friendlyNote(serverError) {
-      if (/not configured|unavailable|service/i.test(serverError)) {
+      if (/not configured|unavailable|service|quota|limit/i.test(serverError)) {
         return 'Your enquiry is ready below. Send it by email, or copy the details into WhatsApp or WeChat - whichever suits you.';
       }
       if (serverError) return serverError;
       return 'We could not record your enquiry automatically. Your details are ready below - send them by email or copy them into WhatsApp or WeChat.';
+    }
+
+    // Formspree wants a JSON body and answers with JSON only when we ask for
+    // it via Accept. Our own Pages Function wants the same shape, so the only
+    // difference is the few underscore-prefixed fields Formspree understands.
+    function payloadFor(values, draft) {
+      if (!ENDPOINT_IS_FORMSPREE) return values;
+      var out = {};
+      FIELDS.forEach(function (k) { out[k] = values[k]; });
+      out._subject = draft.subject;
+      out._replyto = values.email;
+      out._gotcha = '';           // honeypot: must stay empty
+      out._format = 'plain';      // readable plain-text notification
+      return out;
     }
 
     form.addEventListener('submit', async function (e) {
@@ -255,7 +285,17 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!form.reportValidity()) return;
 
       var values = collect();
-      armFallback(draftOf(values));
+      var draft = draftOf(values);
+      armFallback(draft);
+
+      // Honeypot tripped -> it is a bot. Show the same success a human would
+      // see so it has nothing to learn from the response, and send nothing.
+      var gotcha = form.querySelector('[name="_gotcha"]');
+      if (gotcha && gotcha.value) {
+        setMsg('Thank you - your enquiry has been received. Our team will reply within one business day.', 'ok');
+        form.reset();
+        return;
+      }
 
       if (submitBtn) submitBtn.disabled = true;
       setMsg('Preparing your enquiry...', '');
@@ -263,14 +303,29 @@ document.addEventListener('DOMContentLoaded', function () {
       try {
         var res = await fetch(INQUIRY_ENDPOINT, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(values)
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payloadFor(values, draft))
         });
         var data = null;
         try { data = await res.json(); } catch (err) { /* non-JSON error body */ }
 
-        if (!res.ok || !data || !data.ok) {
-          useFallback(friendlyNote((data && data.error) || ''));
+        if (res.status === 429) {
+          useFallback('We are receiving more enquiries than our plan allows right now. Please send yours by email or copy the details below - we will reply either way.');
+          return;
+        }
+
+        // Formspree answers 200 on success; our own function answers {ok:true}.
+        var good = res.ok && (!ENDPOINT_IS_FORMSPREE || !data || data.error === undefined);
+        if (!good) {
+          var serverError = '';
+          if (data && data.error) serverError = data.error;
+          else if (data && data.errors && data.errors.length) {
+            serverError = data.errors.map(function (e) { return e.message || e; }).join(' ');
+          }
+          useFallback(friendlyNote(serverError));
           return;
         }
 

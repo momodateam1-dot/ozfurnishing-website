@@ -58,20 +58,55 @@ Pages 已连接 GitHub 仓库，请在 **Settings → Builds & deployments** 确
 
 ---
 
-## 三、Pages Functions：环境变量与 R2 绑定
+## 三、询盘接收方案
 
-### ‼️ 这一步是可选的，不配也能正常上线
+### ✅ 推荐：Formspree（3 分钟，免后端）
 
-**当前站点就是没有配置后端的状态，询盘走邮件 / WhatsApp / 微信，功能完整。**
+海外独立站最通用的无服务器表单方案。免费额度 **50 条 / 月**，自带防垃圾过滤，
+提交后 3~5 秒邮件直达你的收件箱，直接点「回复」就能联系客户。
 
-开通 R2 需要先绑定信用卡（Cloudflare 的风控要求，即使只用免费额度也要绑），
-如果不想绑卡，直接跳过本章，站点照常运行。
+**1. 获取端点**
 
-不配置时 `/api/inquiry` 返回 503，前端自动降级为「选一个渠道发送」面板，
-并且**不会把「未配置」这种技术细节暴露给客户** ——
-客户看到的是一句正常引导，效果等同于一个手工询盘流程。
+1. 打开 https://formspree.io 注册
+2. **New Form** → 名称填 `OZ Website Sourcing Inquiry`
+3. 接收邮箱填你的真实邮箱（建议 `807735000@qq.com`）
+4. 创建后会得到一个端点，形如 `https://formspree.io/f/xvovbxyz`
 
-### 如果要配置（可选）
+**2. 填进代码**
+
+打开 `assets/main.js` 最顶部，改这一行：
+
+```js
+var INQUIRY_ENDPOINT = 'https://formspree.io/f/xvovbxyz';   // 换成你自己的
+```
+
+就这一处，其他地方都不用动。
+
+**3. 推送**
+
+双击 `push.cmd`，Cloudflare 自动重新部署，几十秒生效。
+
+**4. 验收**
+
+去网站填一次表单提交，出现**绿色**提示「Thank you - your enquiry has been received」，
+同时邮箱收到询盘邮件 —— 成功。
+
+> 💡 提示：如果邮箱里没收到，先看 Formspree 后台的 **Submissions**，
+> 那里有所有提交记录。另外记得去邮箱把 Formspree 加白名单，避免进垃圾箱。
+>
+> ⚠️ 免费额度用完后（50 条 / 月），表单会自动切换到「选渠道发送」的降级面板，
+> 客户仍可通过邮件 / WhatsApp / 微信联系你，**不会丢单**。
+> 量大了再升级 Formspree 套餐（约 $10/月，1000 条）。
+
+**已内置的防垃圾**：表单里有一个隐藏的 `_gotcha` 蜜罐字段，
+机器人填了就会被静默丢弃；真人看不见也填不到。
+
+---
+
+### 备选：自建 Pages Function + R2（可选，需绑信用卡）
+
+开通 R2 需要先绑定信用卡（Cloudflare 的风控要求，即使只用免费额度也要绑）。
+如果不想绑卡，就用上面的 Formspree 方案，效果一样。
 
 **Settings → Environment variables**（Production 与 Preview 都加）：
 

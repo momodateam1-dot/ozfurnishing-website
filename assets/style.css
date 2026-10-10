@@ -193,3 +193,6 @@ body.nav-open{overflow:hidden}
 .note a{color:var(--gold2);border-bottom:1px solid var(--line)}
 @media(max-width:1050px){.legal-layout{grid-template-columns:230px 1fr;gap:44px}}
 @media(max-width:780px){.legal-layout{grid-template-columns:1fr;gap:34px}.legal-toc{position:static;padding:22px}.prose h3{margin-top:42px}.prose h3:first-of-type{margin-top:0}}
+
+/* honeypot: hidden from people, still focusable by dumb bots, never by keyboard */
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none}
