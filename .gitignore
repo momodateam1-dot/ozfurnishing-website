@@ -33,3 +33,4 @@ push.cmd
 push_api.cmd
 push_api.py
 .gh_token
+.gh_remote_head

@@ -274,8 +274,11 @@ document.addEventListener('DOMContentLoaded', function () {
       var out = { access_key: WEB3FORMS_KEY };
       FIELDS.forEach(function (k) { out[k] = values[k]; });
       out.subject = draft.subject;       // email subject line
-      out.email = values.email;          // sets the reply-to address
-      out.replyto = CONTACT_EMAIL;
+      // Web3Forms uses `email` as the Reply-To and lets `replyto` override it.
+      // Both must point at the buyer: if replyto were our own address, hitting
+      // "Reply" in the inbox would send the answer back to ourselves.
+      out.email = values.email;
+      out.replyto = values.email;
       out.botcheck = '';                 // honeypot: must stay empty
       return out;
     }
