@@ -21,14 +21,12 @@ body.nav-open{overflow:hidden}
 .hero-visual .slide{position:absolute;inset:0;opacity:0;transition:opacity .65s ease;background-position:center;background-size:cover;cursor:pointer}
 .hero-visual .slide.is-active{opacity:1}
 .hero-visual .slide:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,7,6,.04) 6%,rgba(6,7,6,.12) 38%,rgba(6,7,6,.85) 100%),radial-gradient(ellipse at 30% 25%,rgba(198,167,107,.3),transparent 45%)}
-/* carousel slides: point these at /assets/img/hero-N.jpg once the generated
-   "company strength" set lands. Until then they mirror product-N.jpg. */
-.hero-visual .s1{background-image:url('/assets/img/product-1.jpg')}
-.hero-visual .s2{background-image:url('/assets/img/product-2.jpg')}
-.hero-visual .s3{background-image:url('/assets/img/product-3.jpg')}
-.hero-visual .s4{background-image:url('/assets/img/product-4.jpg')}
-.hero-visual .s5{background-image:url('/assets/img/product-5.jpg')}
-.hero-visual .s6{background-image:url('/assets/img/product-6.jpg')}
+.hero-visual .s1{background-image:url('/assets/img/hero-1.jpg')}
+.hero-visual .s2{background-image:url('/assets/img/hero-2.jpg')}
+.hero-visual .s3{background-image:url('/assets/img/hero-3.jpg')}
+.hero-visual .s4{background-image:url('/assets/img/hero-4.jpg')}
+.hero-visual .s5{background-image:url('/assets/img/hero-5.jpg')}
+.hero-visual .s6{background-image:url('/assets/img/hero-6.jpg')}
 .visual-label{z-index:4;cursor:pointer}
 .hero-visual:focus-visible{outline:2px solid var(--gold2);outline-offset:4px}
 .slide-dots{position:absolute;right:15px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;z-index:5}
