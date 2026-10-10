@@ -60,6 +60,19 @@ Pages 已连接 GitHub 仓库，请在 **Settings → Builds & deployments** 确
 
 ## 三、Pages Functions：环境变量与 R2 绑定
 
+### ‼️ 这一步是可选的，不配也能正常上线
+
+**当前站点就是没有配置后端的状态，询盘走邮件 / WhatsApp / 微信，功能完整。**
+
+开通 R2 需要先绑定信用卡（Cloudflare 的风控要求，即使只用免费额度也要绑），
+如果不想绑卡，直接跳过本章，站点照常运行。
+
+不配置时 `/api/inquiry` 返回 503，前端自动降级为「选一个渠道发送」面板，
+并且**不会把「未配置」这种技术细节暴露给客户** ——
+客户看到的是一句正常引导，效果等同于一个手工询盘流程。
+
+### 如果要配置（可选）
+
 **Settings → Environment variables**（Production 与 Preview 都加）：
 
 | 变量 | 说明 |
@@ -73,11 +86,14 @@ Pages 已连接 GitHub 仓库，请在 **Settings → Builds & deployments** 确
 |---|---|
 | `INQUIRY_BUCKET` | `oz-inquiries` |
 
-两者都配置好后 `/api/inquiry` 才会返回 200。都不配置时返回 503，前端自动降级到邮件方式。
+两者都配置好后 `/api/inquiry` 才会返回 200，前端显示绿色成功提示。
 
 > 修改环境变量或绑定后需要**重新部署**一次才会生效（Deployments → Retry deployment）。
 
 建议同时在 **WAF → Rate limiting rules** 给 `/api/inquiry` 加一条限流（如 10 次 / 分钟 / IP），防止刷单。
+
+> ⚠️ 只做 R2 绑定不做 Resend 也行：询盘会存进 R2，只是不会发邮件提醒，
+> 你需要自己去 Cloudflare 后台的桶里查看。
 
 ---
 

@@ -104,6 +104,11 @@ body.nav-open{overflow:hidden}
 .form-success .btn{min-height:44px;padding:12px 16px;border-color:#9d7d43;color:#6d5526}
 .form-success .btn.gold{background:#9d7d43;border-color:#9d7d43;color:#fffdf8}
 .form-success .btn.gold:hover{background:#7d6234;border-color:#7d6234;color:#fffdf8}
+.form-success .panel-alt{font-size:11.5px;color:#6b6759;margin:14px 0 0;padding-top:13px;border-top:1px solid rgba(198,167,107,.3);line-height:1.8}
+.form-success .panel-alt a{color:#8a6d31;border-bottom:1px solid rgba(157,125,67,.5);font-weight:700}
+.form-success .panel-alt a:hover{border-bottom-color:#7d6234}
+.form-success .wechat-copy{background:none;border:0;padding:0;font:inherit;font-weight:700;color:#8a6d31;cursor:pointer;border-bottom:1px dashed rgba(157,125,67,.6)}
+.form-success .wechat-copy:hover{color:#7d6234;border-bottom-color:#7d6234}
 .footer-badges{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
 .footer-badges span{border:1px solid rgba(198,167,107,.28);padding:6px 10px;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#8b8c82}
 @media(max-width:1050px){.links{gap:15px}.links a{font-size:10px}.navin{gap:18px}.brandname{font-size:10px}.hero-inner{gap:4%}.trust-inner{grid-template-columns:1fr 1fr 1fr}.trust-intro{display:none}.trust-item:first-of-type{border-left:0}.cards4{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1.4fr 1fr 1fr}.footer-grid>div:last-child{grid-column:2/4}.hero-visual{min-height:430px}}

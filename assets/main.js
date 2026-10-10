@@ -239,6 +239,17 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
+    // The endpoint may legitimately be unconfigured (no R2 bucket bound yet).
+    // Never surface that plumbing detail to a buyer - turn it into the same
+    // "pick a channel" step they would see on any other failure.
+    function friendlyNote(serverError) {
+      if (/not configured|unavailable|service/i.test(serverError)) {
+        return 'Your enquiry is ready below. Send it by email, or copy the details into WhatsApp or WeChat - whichever suits you.';
+      }
+      if (serverError) return serverError;
+      return 'We could not record your enquiry automatically. Your details are ready below - send them by email or copy them into WhatsApp or WeChat.';
+    }
+
     form.addEventListener('submit', async function (e) {
       e.preventDefault();
       if (!form.reportValidity()) return;
@@ -247,7 +258,7 @@ document.addEventListener('DOMContentLoaded', function () {
       armFallback(draftOf(values));
 
       if (submitBtn) submitBtn.disabled = true;
-      setMsg('Sending your inquiry...', '');
+      setMsg('Preparing your enquiry...', '');
 
       try {
         var res = await fetch(INQUIRY_ENDPOINT, {
@@ -259,8 +270,7 @@ document.addEventListener('DOMContentLoaded', function () {
         try { data = await res.json(); } catch (err) { /* non-JSON error body */ }
 
         if (!res.ok || !data || !data.ok) {
-          useFallback((data && data.error) ||
-            'We could not record your inquiry automatically. Please send it by email or copy the details below.');
+          useFallback(friendlyNote((data && data.error) || ''));
           return;
         }
 
@@ -269,7 +279,7 @@ document.addEventListener('DOMContentLoaded', function () {
         form.reset();
         if (msg && msg.scrollIntoView) msg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       } catch (err) {
-        useFallback('We could not reach the server. Please send your inquiry by email or copy the details below.');
+        useFallback('Your enquiry is ready below. Send it by email, or copy the details into WhatsApp or WeChat - whichever suits you.');
       } finally {
         if (submitBtn) submitBtn.disabled = false;
       }
