@@ -1,6 +1,6 @@
 /* OZ International - site interactions */
 
-var CONTACT_EMAIL = 'sales@ozfurnishing.com';
+var CONTACT_EMAIL = '807735000@qq.com';
 var INQUIRY_ENDPOINT = '/api/inquiry';
 
 /* Clipboard helper: async API with a legacy execCommand fallback. */

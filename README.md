@@ -24,6 +24,8 @@
 ├─ process.html          四步流程
 ├─ about.html            关于我们
 ├─ inquiry.html          询盘表单 + FAQ
+├─ privacy.html          隐私政策（不披露注册名/注册地址）
+├─ legal.html            法律声明 / 使用条款
 ├─ 404.html              自定义 404
 ├─ assets/
 │  ├─ style.css          样式（唯一源）
@@ -97,14 +99,14 @@ python tools/switch-cdn.py --local                # 切回本地
 
 | 渠道 | 值 |
 |---|---|
-| 邮箱 | `sales@ozfurnishing.com` |
+| 邮箱 | `807735000@qq.com` |
 | WhatsApp / 电话 | `+86 180 2586 5699`（[wa.me/8618025865699](https://wa.me/8618025865699)） |
 | 微信 | `guozai077885`（页脚可点击复制） |
 | WhatsApp 二维码 | `assets/img/whatsapp-qr.png`，询盘页可展开查看 |
 
 ## 发布前必做
 
-- [ ] 确认 `sales@ozfurnishing.com` 能正常收信
+- [ ] 确认 `807735000@qq.com` 能正常收信
 - [ ] 确认 WhatsApp / 电话 `+86 180 2586 5699` 可接通，二维码与号码一致
 - [ ] 确认微信号 `guozai077885` 可被搜索添加
 - [ ] 替换 `assets/img/hero-*.jpg` 为公司自有版权图片（当前为 Unsplash 下载，商用需授权）

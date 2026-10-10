@@ -57,7 +57,7 @@ Pages 已连接 GitHub 仓库，请在 **Settings → Builds & deployments** 确
 | 变量 | 说明 |
 |---|---|
 | `RESEND_API_KEY` | Resend API key（resend.com 免费额度足够），用于邮件通知 |
-| `NOTIFICATION_EMAIL_TO` | 接收询盘的邮箱，如 `sales@ozfurnishing.com` |
+| `NOTIFICATION_EMAIL_TO` | 接收询盘的邮箱，如 `807735000@qq.com` |
 
 **Settings → Functions → R2 bucket bindings**：
 
