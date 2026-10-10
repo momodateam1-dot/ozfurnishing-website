@@ -6,13 +6,13 @@
 
 ## 技术栈
 
-| 层 | 选型 |
-|---|---|
-| 源码 | GitHub `momodateam1-dot/ozfurnishing-website`（分支 `main`） |
-| 托管 / CDN | Cloudflare Pages（无构建命令，输出目录 `.`） |
-| 询盘接口 | Cloudflare Pages Functions（`functions/api/inquiry.js`） |
-| 对象存储 | Cloudflare R2：`oz-assets`（公开图片）、`oz-inquiries`（私有询盘） |
-| 域名 | Namecheap 注册 → Cloudflare DNS 托管 |
+| 层        | 选型                                                       |
+| -------- | -------------------------------------------------------- |
+| 源码       | GitHub `momodateam1-dot/ozfurnishing-website`（分支 `main`） |
+| 托管 / CDN | Cloudflare Pages（无构建命令，输出目录 `.`）                         |
+| 询盘接口     | Cloudflare Pages Functions（`functions/api/inquiry.js`）   |
+| 对象存储     | Cloudflare R2：`oz-assets`（公开图片）、`oz-inquiries`（私有询盘）     |
+| 域名       | Namecheap 注册 → Cloudflare DNS 托管                         |
 
 ## 目录结构
 
@@ -74,6 +74,7 @@ npx wrangler pages dev .
 ```
 
 行为：
+
 - 校验 `name` / `email` / `details` 必填，邮箱格式，字段长度上限；
 - 写入 R2 私有桶 `oz-inquiries`，键名 `inquiries/YYYY-MM-DD/<timestamp>-<rand>.json`；
 - 若配置了 `RESEND_API_KEY` + `NOTIFICATION_EMAIL_TO`，同时发邮件通知；
@@ -92,12 +93,21 @@ python tools/switch-cdn.py cdn.ozfurnishing.com   # 切到 CDN
 python tools/switch-cdn.py --local                # 切回本地
 ```
 
+## 联系方式（已配置）
+
+| 渠道 | 值 |
+|---|---|
+| 邮箱 | `sales@ozfurnishing.com` |
+| WhatsApp / 电话 | `+86 180 2586 5699`（[wa.me/8618025865699](https://wa.me/8618025865699)） |
+| 微信 | `guozai077885`（页脚可点击复制） |
+| WhatsApp 二维码 | `assets/img/whatsapp-qr.png`，询盘页可展开查看 |
+
 ## 发布前必做
 
-- [ ] 替换真实联系邮箱（当前占位 `sales@ozfurnishing.com`）
-- [ ] 替换 WhatsApp / 电话（当前占位 `+86 000 0000 0000`、`wa.me/860000000000`）
-- [ ] 替换微信 ID（当前占位 `OZ-TRADE`）
-- [ ] 替换 `assets/img/*` 为公司自有版权图片（当前为 Unsplash 下载，商用需授权）
+- [ ] 确认 `sales@ozfurnishing.com` 能正常收信
+- [ ] 确认 WhatsApp / 电话 `+86 180 2586 5699` 可接通，二维码与号码一致
+- [ ] 确认微信号 `guozai077885` 可被搜索添加
+- [ ] 替换 `assets/img/hero-*.jpg` 为公司自有版权图片（当前为 Unsplash 下载，商用需授权）
 - [ ] 核对 `<24h` 响应、`100%` 出货前检验、支持文件格式等业务承诺
 - [ ] 补充公司注册名称、地址、隐私政策与法律声明
 

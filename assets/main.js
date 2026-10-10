@@ -3,8 +3,47 @@
 var CONTACT_EMAIL = 'sales@ozfurnishing.com';
 var INQUIRY_ENDPOINT = '/api/inquiry';
 
+/* Clipboard helper: async API with a legacy execCommand fallback. */
+function copyText(text) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    return navigator.clipboard.writeText(text);
+  }
+  return new Promise(function (resolve, reject) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (err) { ok = false; }
+    document.body.removeChild(ta);
+    ok ? resolve() : reject(new Error('copy failed'));
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
+
+  /* ---- Footer WeChat id: click to copy ---- */
+  document.querySelectorAll('.wechat-copy').forEach(function (btn) {
+    var id = btn.getAttribute('data-copy-id') || btn.textContent.trim();
+    var restore = null;
+    btn.addEventListener('click', function () {
+      copyText(id).then(function () {
+        btn.textContent = 'Copied: ' + id;
+        btn.classList.add('copied');
+        clearTimeout(restore);
+        restore = setTimeout(function () {
+          btn.textContent = id;
+          btn.classList.remove('copied');
+        }, 1800);
+      }, function () {
+        btn.textContent = id;
+      });
+    });
+  });
 
   /* ---- Mobile navigation: drawer + backdrop ---- */
   var toggle = document.querySelector('.menu-toggle');
@@ -242,25 +281,8 @@ document.addEventListener('DOMContentLoaded', function () {
         copyBtn.textContent = 'Copied ✓';
         setTimeout(function () { copyBtn.textContent = original; }, 1800);
       };
-      var legacyCopy = function () {
-        var ta = document.createElement('textarea');
-        ta.value = copyBtn.getAttribute('data-copy') || '';
-        ta.setAttribute('readonly', '');
-        ta.style.position = 'fixed';
-        ta.style.opacity = '0';
-        document.body.appendChild(ta);
-        ta.select();
-        try { document.execCommand('copy'); } catch (err) { /* no clipboard access */ }
-        document.body.removeChild(ta);
-        flash();
-      };
       copyBtn.addEventListener('click', function () {
-        var text = copyBtn.getAttribute('data-copy') || '';
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(text).then(flash, legacyCopy);
-        } else {
-          legacyCopy();
-        }
+        copyText(copyBtn.getAttribute('data-copy') || '').then(flash, flash);
       });
     }
   }

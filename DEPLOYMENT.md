@@ -152,6 +152,9 @@ dave.ns.cloudflare.com
 - [ ] 提交询盘表单 → 页面显示绿色成功提示
 - [ ] R2 桶 `oz-inquiries` 里出现 `inquiries/<日期>/...json`
 - [ ] 销售邮箱收到 Resend 通知邮件
+- [ ] `tel:` 链接在手机上能唤起拨号，号码为 `+86 180 2586 5699`
+- [ ] WhatsApp 卡片跳转到 `wa.me/8618025865699`，二维码可正常展开
+- [ ] 页脚微信 `guozai077885` 点击可复制
 - [ ] `https://ozfurnishing.com/sitemap.xml` 与 `robots.txt` 可访问
 - [ ] 响应头含 `Strict-Transport-Security`、`X-Content-Type-Options`（`_headers` 生效）
 - [ ] 断网 / 停止 Functions 时提交表单，会降级显示邮件面板（不丢单）

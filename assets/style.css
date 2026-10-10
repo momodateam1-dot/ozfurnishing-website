@@ -141,3 +141,23 @@ body.nav-open{overflow:hidden}
 .form-msg.ok{background:#e5ecd9;border-left-color:#6d7f4a;color:#3d4a26}
 .form-msg.warn{background:#f4e7d9;border-left-color:#a8763c;color:#6a4923}
 .form-submit[disabled]{opacity:.6;cursor:progress}
+
+/* ===== v3.6 contact channels: WhatsApp QR panel ===== */
+.qr-panel{border:1px solid rgba(198,167,107,.22);background:#10120e;transition:border-color .2s}
+.qr-panel:hover{border-color:var(--gold)}
+.qr-panel summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 24px;cursor:pointer;list-style:none;font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--gold2)}
+.qr-panel summary::-webkit-details-marker{display:none}
+.qr-panel .qr-mark{font-size:15px;font-weight:400}
+.qr-panel .qr-close{display:none}
+.qr-panel[open] .qr-open{display:none}
+.qr-panel[open] .qr-close{display:flex;align-items:center;justify-content:space-between;width:100%}
+.qr-body{display:flex;align-items:center;gap:22px;padding:4px 24px 24px;border-top:1px solid rgba(198,167,107,.16);margin-top:2px;padding-top:20px}
+.qr-body img{width:150px;height:auto;flex-shrink:0;background:#fffdf8;padding:8px;border:1px solid var(--line)}
+.qr-body p{font-size:11px;line-height:1.85;color:#aaa99f;margin:0}
+.qr-body strong{color:var(--gold2);font-weight:400}
+@media(max-width:520px){.qr-body{flex-direction:column;align-items:flex-start;gap:16px}.qr-body img{width:132px}}
+
+/* click-to-copy WeChat id in the footer */
+.wechat-copy{background:none;border:0;padding:0;font:inherit;color:inherit;cursor:pointer;text-align:left;border-bottom:1px dashed rgba(198,167,107,.5);transition:color .2s,border-color .2s}
+.wechat-copy:hover{color:var(--gold2);border-bottom-color:var(--gold2)}
+.wechat-copy.copied{color:var(--gold2);border-bottom-color:var(--gold2)}
