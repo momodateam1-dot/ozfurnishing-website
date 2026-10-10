@@ -28,5 +28,8 @@ Thumbs.db
 _tmp_*.py
 _tmp_*.js
 
-# Local convenience script (machine-specific git path)
+# Local convenience scripts (machine-specific paths / secrets)
 push.cmd
+push_api.cmd
+push_api.py
+.gh_token
