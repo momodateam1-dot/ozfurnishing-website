@@ -196,3 +196,121 @@ body.nav-open{overflow:hidden}
 
 /* honeypot: hidden from people, still focusable by dumb bots, never by keyboard */
 .hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none}
+
+/* ============================================================
+   Trending — monthly market signal page (/trending)
+   Scoped with tr- prefix. Nothing here touches existing rules.
+   ============================================================ */
+
+.tr-hero{padding:96px 0 84px}
+
+.tr-eyebrow{display:inline-block;font-size:10px;letter-spacing:.18em;
+  text-transform:uppercase;font-weight:700;color:var(--gold);
+  border:1px solid var(--line);padding:7px 14px;margin-bottom:26px}
+.tr-eyebrow.dark{color:#8a6f3e;border-color:rgba(9,10,9,.18)}
+
+.tr-h1{font-family:var(--serif);font-size:clamp(34px,5vw,60px);line-height:1.08;
+  letter-spacing:-.015em;margin:0 0 26px;max-width:920px}
+.tr-h2{font-family:var(--serif);font-size:clamp(26px,3.4vw,40px);line-height:1.15;
+  margin:0 0 18px}
+
+.tr-lede{max-width:730px;font-size:16px;line-height:1.85;color:#c9c4b7;margin:0}
+.ivory .tr-lede{color:#4a4b44}
+.tr-sub{max-width:730px;font-size:14px;line-height:1.85;color:var(--muted);margin:0 0 34px}
+.ivory .tr-sub{color:#5c5d55}
+
+.tr-metarow{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  background:var(--line);border:1px solid var(--line);margin-top:44px}
+.tr-metarow>div{background:var(--black);padding:20px 22px}
+.tr-metarow span{display:block;font-size:9px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--darkmuted);margin-bottom:9px}
+.tr-metarow strong{font-family:var(--serif);font-size:22px;color:var(--gold);
+  font-weight:400}
+
+.tr-chart{margin:6px 0 30px}
+.tr-svg{width:100%;height:auto;display:block;max-width:680px}
+.tr-svg-label{font-family:var(--sans);font-size:13px;font-weight:700;fill:#e8e3d6}
+.tr-svg-sub{font-family:var(--sans);font-size:9px;letter-spacing:.1em;
+  text-transform:uppercase;fill:#8b8a80}
+.tr-svg-val{font-family:var(--sans);font-size:12px;font-weight:700;fill:var(--gold)}
+.tr-col-val{font-family:var(--sans);font-size:13px;font-weight:700;
+  fill:var(--gold);text-anchor:middle}
+.tr-col-lab{font-family:var(--sans);font-size:10px;letter-spacing:.08em;
+  fill:#8b8a80;text-anchor:middle}
+.tr-donut-num{font-family:var(--serif);font-size:40px;fill:var(--gold);
+  text-anchor:middle}
+.tr-donut-cap{font-family:var(--sans);font-size:8px;letter-spacing:.16em;
+  fill:#8b8a80;text-anchor:middle}
+.ivory .tr-svg-label{fill:#22231f}
+.ivory .tr-svg-sub{fill:#6f7068}
+.ivory .tr-col-lab{fill:#6f7068}
+.ivory .tr-donut-cap{fill:#6f7068}
+
+.tr-legend{list-style:none;margin:0;padding:0;display:grid;
+  grid-template-columns:repeat(2,1fr);gap:12px 34px;max-width:900px}
+.tr-legend li{font-size:13px;line-height:1.6;color:#c9c4b7;
+  display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.ivory .tr-legend li{color:#4a4b44}
+.tr-legend strong{color:#f0ebde;font-weight:700}
+.ivory .tr-legend strong{color:#191a17}
+.tr-legend-swatch{width:11px;height:11px;border-radius:2px;flex:none;
+  display:inline-block;transform:translateY(1px)}
+.tr-share{font-family:var(--serif);font-size:15px;color:var(--gold)}
+
+.tr-delta{font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+  font-weight:700;padding:4px 9px;border:1px solid var(--line);color:var(--darkmuted)}
+.tr-delta.up{color:var(--gold);border-color:var(--line)}
+.tr-delta.new{background:var(--gold);color:var(--black);border-color:var(--gold)}
+
+.tr-split{display:grid;grid-template-columns:380px 1fr;gap:64px;align-items:start}
+
+.tr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:12px}
+.tr-card{background:var(--white);border:1px solid var(--lightline);
+  padding:26px 24px 24px;display:flex;flex-direction:column;
+  transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.tr-card:hover{transform:translateY(-4px);border-color:var(--gold);
+  box-shadow:0 18px 40px rgba(9,10,9,.10)}
+.tr-card-top{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.tr-rank{font-family:var(--serif);font-size:26px;color:var(--gold);line-height:1}
+.tr-plat{font-size:9px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
+  color:#6f7068;border:1px solid var(--lightline);padding:4px 8px}
+.tr-name{font-family:var(--serif);font-size:20px;line-height:1.25;margin:0 0 8px;
+  color:var(--black)}
+.tr-cat{font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+  color:#8b8a80;margin-bottom:20px}
+.tr-figs{display:grid;grid-template-columns:1fr 1fr;gap:14px;
+  border-top:1px solid var(--lightline);border-bottom:1px solid var(--lightline);
+  padding:16px 0;margin-bottom:16px}
+.tr-fig span{display:block;font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+  color:#8b8a80;margin-bottom:6px}
+.tr-fig strong{display:block;font-family:var(--serif);font-size:19px;
+  color:var(--black);font-weight:400;line-height:1.2}
+.tr-fig em{display:block;font-style:normal;font-size:11px;color:#6f7068;margin-top:5px}
+.tr-heatrow{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.tr-heatlab{font-size:9px;letter-spacing:.12em;text-transform:uppercase;
+  color:#8b8a80;flex:none}
+.tr-heat{flex:1;height:3px;background:rgba(9,10,9,.13)}
+.tr-heat span{display:block;height:3px;background:var(--gold)}
+.tr-heatval{font-size:11px;font-weight:700;color:var(--gold);flex:none;
+  font-variant-numeric:tabular-nums}
+.tr-note{font-size:12.5px;line-height:1.8;color:#5c5d55;margin:0;flex:1}
+.tr-flag{align-self:flex-start;margin-top:18px;font-size:9px;letter-spacing:.12em;
+  text-transform:uppercase;font-weight:700;color:#8a6f3e;
+  border:1px solid rgba(198,167,107,.5);padding:5px 10px}
+
+.tr-prose p{font-size:14px;line-height:1.9;color:#c9c4b7;margin:0 0 18px}
+.tr-cta{display:inline-flex;align-items:center;gap:10px;margin-top:12px}
+
+@media (max-width:1080px){
+  .tr-split{grid-template-columns:1fr;gap:44px}
+  .tr-grid{grid-template-columns:repeat(2,1fr)}
+  .tr-metarow{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:720px){
+  .tr-hero{padding:64px 0 56px}
+  .tr-grid{grid-template-columns:1fr}
+  .tr-legend{grid-template-columns:1fr}
+  .tr-metarow{grid-template-columns:1fr}
+  .tr-svg{min-width:520px}
+  .tr-chart{overflow-x:auto}
+}
