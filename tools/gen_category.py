@@ -357,7 +357,18 @@ def render(d, lookup, header, footer):
 # index page
 # --------------------------------------------------------------------------
 
+NUMWORD = {1: 'One', 2: 'Two', 3: 'Three', 4: 'Four', 5: 'Five',
+           6: 'Six', 7: 'Seven', 8: 'Eight'}
+
+
+def numword(n):
+    return NUMWORD.get(n, str(n))
+
+
 def render_index(cats, header, footer):
+    n = len(cats)
+    word = numword(n)
+    lower = word.lower()
     cards = ''.join(
         '<a class="service-card" href="/sourcing/%s">'
         '<div class="n">%02d</div><h3>%s</h3>'
@@ -372,10 +383,10 @@ def render_index(cats, header, footer):
     body = (
         '<section class="page-hero"><div class="wrap">'
         '<div class="eyebrow">Sourcing categories · Furniture, home &amp; '
-        'outdoor</div>'
-        '<h1>What We Source from China<br><em>Six Categories, One Buying '
+        'interiors</div>'
+        '<h1>What We Source from China<br><em>%(word)s Categories, One Buying '
         'Desk</em></h1>'
-        '<p>Furniture, home and outdoor products are where our supplier '
+        '<p>Furniture, interiors and home goods are where our supplier '
         'network is deepest. Pick a category to see what we buy in it, which '
         'materials and finishes are realistic, and what the first order '
         'usually looks like.</p>'
@@ -388,16 +399,16 @@ def render_index(cats, header, footer):
         '<div class="badge-row"><span class="mini-badge">Factory Direct</span>'
         '<span class="mini-badge">Sample Before Bulk</span>'
         '<span class="mini-badge">Consolidated Shipping</span></div>'
-        '<div class="page-kicker">06</div>'
+        '<div class="page-kicker">%(nn)02d</div>'
         '</div></section>'
         '<section class="section"><div class="wrap">'
         '<div class="section-header"><div>'
-        '<div class="eyebrow">The six categories</div>'
+        '<div class="eyebrow">The %(lower)s categories</div>'
         '<h2>Start where<br><em>your brief fits.</em></h2>'
         '</div><p>Every category page covers the same ground: what we buy, '
         'what it is made of, what the first order realistically costs and '
         'how long it takes.</p></div>'
-        '<div class="cards3">%s</div>'
+        '<div class="cards3">%(cards)s</div>'
         '</div></section>'
         '<section class="section ivory"><div class="wrap">'
         '<div class="section-header"><div>'
@@ -431,7 +442,7 @@ def render_index(cats, header, footer):
         'whether this is a personal shopping order or a B2B brief.</p>'
         '</div><a class="btn gold" href="/inquiry">Make an Inquiry '
         '<span class="arrow">&#8599;</span></a></div></section>'
-    ) % cards
+    ) % {'cards': cards, 'word': word, 'lower': lower, 'nn': n}
     url = SITE + '/sourcing'
     ld = json.dumps({
         '@context': 'https://schema.org',
@@ -476,11 +487,11 @@ def render_index(cats, header, footer):
         <script src="/assets/main.js" defer></script>
   </body></html>
 """ % {
-        'desc': e('Six sourcing categories we buy from China: furniture and '
-                  'interiors, home decor, outdoor, lighting, kitchenware and '
-                  'hotel FF&E. Materials, MOQ and lead times.'),
-        'ogtitle': e('What We Source from China | Six Categories | OZ'),
-        'title': e('What We Source from China | Six Categories | OZ'),
+        'desc': e('Sourcing categories we buy from China: furniture, home '
+                  'decor, bedding, lighting, kitchenware and hotel FF&E. '
+                  'Materials, MOQ, lead times.'),
+        'ogtitle': e('What We Source from China | %s Categories | OZ' % word),
+        'title': e('What We Source from China | %s Categories | OZ' % word),
         'url': url,
         'ld': ld,
         'header': header,

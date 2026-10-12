@@ -28,7 +28,7 @@
     {"n": "01", "name": "Solid wood", "note": "Oak, ash, walnut, rubberwood and beech. Ask for kiln-dried stock at 8–12% moisture content — anything wetter moves and cracks after it reaches a drier climate."},
     {"n": "02", "name": "Engineered board", "note": "Plywood, MDF and particle board with veneer, melamine or lacquer. Cheaper and more dimensionally stable than solid wood; specify the formaldehyde class (E0, CARB or EPA) if your market requires it."},
     {"n": "03", "name": "Metal", "note": "Steel, stainless steel and aluminium, powder-coated, brushed or plated. Check coating thickness and whether the frame is welded or bolted — it changes both strength and flat-pack feasibility."},
-    {"n": "04", "name": "Rattan, cane & woven", "note": "Natural rattan and cane webbing for interiors, PE rattan for outdoor. Natural material needs consistent grading, or colour drift shows across a container."},
+    {"n": "04", "name": "Rattan, cane & woven", "note": "Natural rattan and cane webbing, plus PE rattan woven over a frame. Natural material needs consistent grading, or colour drift shows across a container."},
     {"n": "05", "name": "Upholstery", "note": "Polyester, linen blends and velvet fabrics, PU, and top-grain or split leather. Specify foam density, Martindale rub count and any fire-retardancy treatment your market requires."},
     {"n": "06", "name": "Stone & sintered surfaces", "note": "Marble, granite, sintered stone and tempered glass for table tops and consoles. Heavy, fragile and usually worth crating rather than cartoning."}
   ],
@@ -86,7 +86,7 @@
     {"q": "How much does it cost to ship furniture from China?", "a": "Furniture is bulky, so freight is charged on volume rather than weight for most sea shipments. A consolidated part-container load is far cheaper per piece than a small standalone shipment. We quote freight on the actual packed volume after consolidation, not on an estimate made before the goods are packed."},
     {"q": "Do you handle hotel and project furniture?", "a": "Yes. Hotel, villa and restaurant furniture is bought against a BOQ and a handover date rather than a single product link, and it goes through our B2B buying flow with factory shortlisting, sampling and pre-shipment inspection included."}
   ],
-  "related": ["home-decor", "outdoor-furniture", "lighting"],
+  "related": ["home-decor", "bedding-textiles", "lighting"],
   "title": "China Furniture Sourcing | Seating, Tables & Interiors | OZ",
   "desc": "Sourcing sofas, dining sets, beds and storage from the Foshan furniture belt. Materials, indicative MOQ, lead times and what the first order costs.",
   "ld_service_name": "China Furniture Sourcing — Seating, Tables and Interior Furniture",

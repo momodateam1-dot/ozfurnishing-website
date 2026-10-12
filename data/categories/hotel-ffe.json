@@ -4,7 +4,7 @@
   "name": "Hotel & Project FF&E",
   "short_name": "Hotel FF&E",
   "sub": "Guest Rooms · Lobbies · Restaurant · Resort",
-  "card_desc": "Contract-grade furniture, soft furnishings, lighting and outdoor sets procured against a BOQ and a handover date.",
+  "card_desc": "Contract-grade furniture, soft furnishings, lighting and bath linen procured against a BOQ and a handover date.",
   "query_category": "Hotel FF&E",
   "eyebrow": "Category 06 · Project and hospitality procurement",
   "h1": "China Hotel FF&amp;E Procurement<br><em>Guest Rooms, Lobbies &amp; Resort Fit-Outs</em>",
@@ -19,7 +19,7 @@
     {"n": "03", "name": "Restaurant & Bar", "desc": "Dining tables and chairs, bar stools, banquette seating, host stands and service stations built for commercial use."},
     {"n": "04", "name": "Soft Furnishings & Bedding", "desc": "Curtains, blackout linings, cushions, throws, rugs, mattresses, protectors, linen and towelling at specified counts."},
     {"n": "05", "name": "Lighting & Decorative", "desc": "Bedside and desk lamps, pendants, wall sconces, mirrors and artwork, specified to the project's electrical standard."},
-    {"n": "06", "name": "Outdoor & Poolside", "desc": "Pool loungers, cabana sets, terrace dining and weather-rated pieces for resort and rooftop areas."}
+    {"n": "06", "name": "Banquet & Meeting", "desc": "Stacking banquet chairs, folding tables, stage and podium pieces and storage built for high-turnover function rooms."}
   ],
   "mat_h2_a": "What it is specified in",
   "mat_h2_em": "and why it matters.",
@@ -86,7 +86,7 @@
     {"q": "Can you build a mock-up room first?", "a": "Yes, and we recommend it for anything bespoke. A mock-up room, or a full set of material and finish samples if a room is impractical, settles comfort, colour and build quality before a container is committed. It is the cheapest insurance available on a project of this size."},
     {"q": "Will you work from our designer's drawings and BOQ?", "a": "Yes. We work from the designer's drawings, BOQ, FF&E schedule or reference images, and we will tell you where a specified item is difficult to source or better quoted elsewhere. We are also used to working under NDA, and will sign before any drawing is opened."}
   ],
-  "related": ["furniture-interiors", "outdoor-furniture", "lighting"],
+  "related": ["furniture-interiors", "bedding-textiles", "lighting"],
   "title": "China Hotel FF&E Procurement | BOQ to Container | OZ",
   "desc": "Hotel, villa and resort FF&E procurement from China. BOQ-led buying, contract-grade spec, room-packed labelling and pre-loading inspection.",
   "ld_service_name": "China Hotel FF&E Procurement — Guest Rooms, Lobbies and Resort Fit-Outs",

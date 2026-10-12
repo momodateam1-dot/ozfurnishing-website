@@ -1,0 +1,95 @@
+{
+  "slug": "bedding-textiles",
+  "order": 3,
+  "name": "Bedding & Home Textiles",
+  "short_name": "Bedding",
+  "sub": "Sheets · Duvets · Pillows · Towels",
+  "card_desc": "Sheet sets, duvets, pillows, towels and blankets bought from Nantong, Shaoxing and Gaoyang mills, with fabric specs confirmed before bulk.",
+  "query_category": "Bedding & Home Textiles",
+  "eyebrow": "Category 03 · Bedding and home textile sourcing from China",
+  "h1": "China Bedding &amp; Home Textile Sourcing<br><em>Sheets, Duvets &amp; Bath Linen</em>",
+  "lead": "Bedding is bought on a number — thread count — and judged on everything the number leaves out: how the fabric feels after ten washes, whether it shrinks out of shape, and whether the white stays white. We buy from the Nantong and Shaoxing mills that supply hotel programmes and export brands, confirm the fabric spec in writing before bulk, and wash-test a sample rather than trusting a listing.",
+  "badges": ["Small Batches Welcome", "Fabric Spec in Writing", "Wash-Tested Samples"],
+  "sub_h2_a": "Six product lines",
+  "sub_h2_em": "we buy most often.",
+  "sub_intro": "Most bedding orders start with one product line and grow into a set. Knowing which line you are pricing first keeps the fabric spec consistent across the rest.",
+  "subcategories": [
+    {"n": "01", "name": "Sheet Sets", "desc": "Flat and fitted sheets with pillowcases, in cotton, lyocell, bamboo viscose or microfibre, made to mattress depth and your market's bed sizes."},
+    {"n": "02", "name": "Duvets & Quilts", "desc": "Down, down-alternative and microfibre fills with shell fabric, baffle construction and tog or GSM rating specified before production."},
+    {"n": "03", "name": "Pillows & Inserts", "desc": "Bed pillows, decorative cushion covers and inserts in polyester, memory foam, latex, feather or down, with firmness matched to use."},
+    {"n": "04", "name": "Towels & Bath Linen", "desc": "Bath towels, hand towels, face cloths and bath robes, with GSM, yarn type and pile height set as a spec rather than a description."},
+    {"n": "05", "name": "Blankets & Throws", "desc": "Waffle and honeycomb weaves, fleece, weighted blankets and knitted throws, including oversized pieces with higher freight per unit."},
+    {"n": "06", "name": "Protectors & Toppers", "desc": "Mattress protectors, encasements, toppers and mattress pads, including waterproof and allergen-barrier constructions."}
+  ],
+  "mat_h2_a": "What it is made of",
+  "mat_h2_em": "and what the label hides.",
+  "mat_intro": "In bedding the fibre, the weave and the finish decide how a product performs after washing — which is exactly where cheap listings stop being cheap.",
+  "materials": [
+    {"n": "01", "name": "Cotton", "note": "Combed, carded and long-staple cotton, woven as percale or sateen. Ask for staple length and yarn count, not just thread count: a 400-count sheet from short-staple fibre pills."},
+    {"n": "02", "name": "Lyocell & bamboo viscose", "note": "Cool, drapey and marketed hard. Both are regenerated cellulose, so check the mill's fibre supplier — quality and price vary far more than the labels suggest."},
+    {"n": "03", "name": "Microfibre & polyester", "note": "Cheapest per set and the most consistent in bulk. Less breathable than natural fibre, which matters in warm climates and for anyone who sleeps hot."},
+    {"n": "04", "name": "Linen & blends", "note": "Washed linen and linen-cotton blends. Premium look and genuinely breathable, but higher unit cost and it creases by design — which some buyers read as a defect."},
+    {"n": "05", "name": "Down & feather fill", "note": "Fill power, down-cluster percentage and source certification are three separate numbers. All three should be on the spec sheet before you commit to a price."},
+    {"n": "06", "name": "Silk", "note": "Mulberry silk in momme weights, mostly for pillowcases and eye masks. Verify momme weight and whether it is real silk or satin-weave polyester."}
+  ],
+  "buy_h2_a": "What the first order",
+  "buy_h2_em": "usually looks like.",
+  "buy_intro": "Bedding is light in weight but bulky in volume, so freight is planned on packed cartons rather than on unit count. These are the ranges buyers plan around.",
+  "buying": [
+    {"label": "Typical MOQ", "note": "Stocked bedding often starts at two to ten sets per design. Custom sizes, colours, labels or packaging usually begin at one hundred to three hundred units.", "tag": "Indicative"},
+    {"label": "Lead time", "note": "Seven to fifteen days for stocked items once we hold them; twenty-five to forty days for made-to-order fabric, custom fills or private-label packaging.", "tag": "Indicative"},
+    {"label": "Sampling", "note": "Buy one set and wash it before committing. Shrinkage, colour fastness and hand feel only show up after the first or second wash.", "tag": "Recommended"},
+    {"label": "Packaging", "note": "Retail fabric bags, zipper cases, printed boxes or vacuum compression. Compression cuts freight noticeably on duvets and pillows.", "tag": "Ask upfront"},
+    {"label": "Compliance", "note": "OEKO-TEX Standard 100 for harmful substances, RDS for down, fibre-content and care labelling rules, and country-of-origin marking.", "tag": "Market dependent"}
+  ],
+  "buy_footnote": "Two quotes that look identical usually differ in yarn count, staple length and finish. We put those three on the spec sheet so the comparison is real.",
+  "check_h2_a": "Six things worth",
+  "check_h2_em": "deciding before you ask.",
+  "check_intro": "Bedding briefs move fastest when the fabric spec and the bed sizes are settled before the first quote comes back.",
+  "checklist": [
+    "The bed sizes you need, since US, UK, EU and AU dimensions are not interchangeable and fitted sheets are cut to mattress depth",
+    "Whether the fabric spec is fixed or you want us to propose one against a target price",
+    "Thread count, yarn count and fibre composition, if you already have a reference product or a swatch",
+    "Wash performance requirements: shrinkage tolerance, colour fastness and pilling resistance",
+    "Whether certification is required for resale, and which standard your market or retail partner expects",
+    "Private-label needs: woven labels, care labels, hangtags and retail packaging"
+  ],
+  "check_footnote": "If you have a product you want to match, send a photo of the care label. Fibre content and washing instructions tell us more than the listing ever does.",
+  "compare": {
+    "eyebrow": "Buying a listing vs. buying a spec",
+    "h2_a": "What changes",
+    "h2_em": "when the fabric is written down.",
+    "intro": "Two sheet sets can photograph identically and differ by three years of service life. The difference is in the spec, not the picture.",
+    "diy_title": "Ordering direct",
+    "diy": [
+      "Thread count is the only number on the listing, and it is the easiest one to inflate",
+      "Fibre content and yarn count unverified until the fabric is in your hands",
+      "Colour and size drift between batches, so reorders rarely match the first",
+      "Shrinkage and pilling discovered at home, after the return window has closed",
+      "No certification paperwork, which blocks retail and marketplace listing"
+    ],
+    "oz_title": "Buying through OZ",
+    "oz": [
+      "Fibre, yarn count, weave and finish written into the order before production",
+      "A sample washed and measured for shrinkage before bulk is confirmed",
+      "Approved sample held in the warehouse as the reference for reorders",
+      "Batch-to-batch colour checked against the approved piece, not against a photo",
+      "OEKO-TEX and RDS documentation requested with the order, not after it"
+    ]
+  },
+  "faq_h2_a": "Before you send",
+  "faq_h2_em": "the first enquiry.",
+  "faq_intro": "These come up on nearly every bedding order.",
+  "faq": [
+    {"q": "Can I buy just a few sets?", "a": "Yes. Stocked bedding can usually be bought two to ten sets at a time, and there is no minimum order value. Freight is the thing to watch: duvets and pillows are bulky, so we compress and pack them to cut volume before quoting the shipment."},
+    {"q": "What thread count should I ask for?", "a": "Thread count alone is a weak signal. A 300-count sheet made from long-staple combed cotton will outlast a 1,000-count sheet made from short-staple fibre with multi-ply yarn. Tell us your target price and who will use the product, and we will propose a fibre, weave and count combination that makes sense for that use."},
+    {"q": "Do you wash-test samples?", "a": "Yes, and we recommend it. We measure the sample before washing, run a standard wash and dry cycle, then measure again and report the shrinkage and any colour change. It adds a few days and it is the single most useful number on a bedding order."},
+    {"q": "Can you do private label and custom packaging?", "a": "Yes. Woven labels, care labels, hangtags and retail packaging are all available, usually from one hundred units upward depending on the item. Send your artwork or a photo of the packaging you want to match and we will confirm what the mill needs."}
+  ],
+  "related": ["furniture-interiors", "home-decor", "hotel-ffe"],
+  "title": "China Bedding & Home Textile Sourcing | Small Batches | OZ",
+  "desc": "Sourcing sheet sets, duvets, pillows, towels and blankets from China mills. Fabric specs, OEKO-TEX, low MOQs and shrinkage control.",
+  "ld_service_name": "China Bedding and Home Textile Sourcing — Sheets, Duvets and Bath Linen",
+  "ld_service_type": "China Bedding and Home Textile Sourcing",
+  "cta_note": "Send a product link, a care-label photo or a target price per set. We will match the fabric spec, quote the landed cost and wash-test a sample first."
+}

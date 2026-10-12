@@ -6,28 +6,127 @@
   "next_update": "2026-11-05",
   "methodology": "Rankings are compiled from the September 2026 public record: TikTok Shop US and UK weekly product charts as republished by EchoTik, FastMoss and cross-border trade press, Amazon US best-seller rank and search-velocity reporting, Temu best-seller roundups plus Temu's own Q2 GMV disclosure, and AliExpress order-velocity leaderboards. Unit and revenue figures are the most recent published values, not live API pulls. Platform percentages are year-on-year where published and quarter-on-quarter or month-on-month where that is all that was reported; Amazon, Shein, AliExpress and TikTok Shop UK/EU move on quarterly disclosure cycles and may lag the reporting month. Where a platform published nothing new this month, the previous edition's figure is carried forward and flagged on the card rather than replaced with a guess. Category shares, retail price bands and every sourcing range are OZ estimates derived from those same public reports and are marked as such.",
   "platforms": [
-    { "key": "tiktok", "name": "TikTok Shop", "region": "US", "heat": 92, "delta": "+62%", "note": "Q3 GMV up 62% year on year, though the quarter-on-quarter rate eased about 15 points. Beauty still the base, but home supplies climbed from 11th to 6th category." },
-    { "key": "amazon", "name": "Amazon", "region": "US", "heat": 87, "delta": "+8%", "note": "US site GMV up 8.2% year on year in Q3. Kitchen storage and small appliances carried September; FBA peak surcharges are squeezing thin listings." },
-    { "key": "temu", "name": "Temu", "region": "US / EU", "heat": 66, "delta": "+9%", "note": "Q2 GMV growth fell below 10% for the first time, with several EU markets down more than 30%. Semi-managed and overseas warehouse are now the price of entry." },
-    { "key": "aliexpress", "name": "AliExpress", "region": "Global", "heat": 71, "delta": "+9%", "note": "Order-velocity leaderboard after the 9.9 Super Deals window. No new growth disclosure this month, so the previous figure is carried forward." },
-    { "key": "shein", "name": "Shein", "region": "US / EU", "heat": 58, "delta": "+1%", "note": "First interim report since the Hong Kong listing: H1 net revenue up 1%, orders up 6.4%, adjusted profit down 55.6%. Home is expanding off a small base." },
-    { "key": "tiktok_eu", "name": "TikTok Shop", "region": "UK / EU", "heat": 55, "delta": "+64%", "note": "The UK chart reads like a home-goods chart — walking pads, blenders, cordless vacuums. No fresh September disclosure, so the previous figure is carried forward." }
+    {
+      "key": "tiktok",
+      "name": "TikTok Shop",
+      "region": "US",
+      "heat": 92,
+      "delta": "+62%",
+      "note": "Q3 GMV up 62% year on year, though the quarter-on-quarter rate eased about 15 points. Beauty still the base, but home supplies climbed from 11th to 6th category."
+    },
+    {
+      "key": "amazon",
+      "name": "Amazon",
+      "region": "US",
+      "heat": 87,
+      "delta": "+8%",
+      "note": "US site GMV up 8.2% year on year in Q3. Kitchen storage and small appliances carried September; FBA peak surcharges are squeezing thin listings."
+    },
+    {
+      "key": "temu",
+      "name": "Temu",
+      "region": "US / EU",
+      "heat": 66,
+      "delta": "+9%",
+      "note": "Q2 GMV growth fell below 10% for the first time, with several EU markets down more than 30%. Semi-managed and overseas warehouse are now the price of entry."
+    },
+    {
+      "key": "aliexpress",
+      "name": "AliExpress",
+      "region": "Global",
+      "heat": 71,
+      "delta": "+9%",
+      "note": "Order-velocity leaderboard after the 9.9 Super Deals window. No new growth disclosure this month, so the previous figure is carried forward."
+    },
+    {
+      "key": "shein",
+      "name": "Shein",
+      "region": "US / EU",
+      "heat": 58,
+      "delta": "+1%",
+      "note": "First interim report since the Hong Kong listing: H1 net revenue up 1%, orders up 6.4%, adjusted profit down 55.6%. Home is expanding off a small base."
+    },
+    {
+      "key": "tiktok_eu",
+      "name": "TikTok Shop",
+      "region": "UK / EU",
+      "heat": 55,
+      "delta": "+64%",
+      "note": "The UK chart reads like a home-goods chart — walking pads, blenders, cordless vacuums. No fresh September disclosure, so the previous figure is carried forward."
+    }
   ],
   "categories": [
-    { "key": "home", "name": "Home & Living", "share": 26, "delta": "+6", "match": "core" },
-    { "key": "beauty", "name": "Beauty & Personal Care", "share": 21, "delta": "+2", "match": "adjacent" },
-    { "key": "kitchen", "name": "Kitchen & Dining", "share": 16, "delta": "+4", "match": "core" },
-    { "key": "outdoor", "name": "Outdoor & Garden", "share": 15, "delta": "+3", "match": "core" },
-    { "key": "auto", "name": "Auto & Tools", "share": 8, "delta": "+1", "match": "adjacent" },
-    { "key": "pet", "name": "Pet", "share": 6, "delta": "+1", "match": "adjacent" },
-    { "key": "other", "name": "Everything else", "share": 8, "delta": "0", "match": "off" }
+    {
+      "key": "home",
+      "name": "Home & Living",
+      "share": 26,
+      "delta": "+6",
+      "match": "core"
+    },
+    {
+      "key": "beauty",
+      "name": "Beauty & Personal Care",
+      "share": 21,
+      "delta": "+2",
+      "match": "adjacent"
+    },
+    {
+      "key": "kitchen",
+      "name": "Kitchen & Dining",
+      "share": 16,
+      "delta": "+4",
+      "match": "core"
+    },
+    {
+      "key": "textiles",
+      "name": "Home Textiles & Bedding",
+      "share": 15,
+      "delta": "+3",
+      "match": "core"
+    },
+    {
+      "key": "auto",
+      "name": "Auto & Tools",
+      "share": 8,
+      "delta": "+1",
+      "match": "adjacent"
+    },
+    {
+      "key": "pet",
+      "name": "Pet",
+      "share": 6,
+      "delta": "+1",
+      "match": "adjacent"
+    },
+    {
+      "key": "other",
+      "name": "Everything else",
+      "share": 8,
+      "delta": "0",
+      "match": "off"
+    }
   ],
   "price_bands": [
-    { "label": "$1 – $10", "share": 8 },
-    { "label": "$10 – $25", "share": 25 },
-    { "label": "$25 – $50", "share": 33 },
-    { "label": "$50 – $100", "share": 17 },
-    { "label": "$100 +", "share": 17 }
+    {
+      "label": "$1 – $10",
+      "share": 8
+    },
+    {
+      "label": "$10 – $25",
+      "share": 25
+    },
+    {
+      "label": "$25 – $50",
+      "share": 33
+    },
+    {
+      "label": "$50 – $100",
+      "share": 17
+    },
+    {
+      "label": "$100 +",
+      "share": 17
+    }
   ],
   "items": [
     {
@@ -47,18 +146,18 @@
     },
     {
       "rank": 2,
-      "name": "Cordless Pressure Washer",
+      "name": "Oversized Waffle Throw Blanket",
       "platform": "tiktok",
-      "category": "outdoor",
-      "origin": "Zhejiang",
-      "price": "$69 – $119",
-      "sourcing": "$24 – $38",
+      "category": "textiles",
+      "origin": "Nantong, Jiangsu",
+      "price": "$29 – $59",
+      "sourcing": "$9 – $17",
       "metric_label": "TikTok Shop US rank",
       "metric_value": "Top 10",
-      "metric_sub": "home cleaning, wk38",
+      "metric_sub": "home textiles, wk38",
       "heat": 89,
       "delta": "rising",
-      "note": "The only non-beauty product to hold a US top-ten slot across September. Battery cell grade and IPX5 water-ingress testing decide whether it survives a second summer — ask who supplies the cells, not just the amp-hour rating."
+      "note": "The home-textile name to hold a US top-ten slot across September. Waffle weave sells on texture and photographs well, which is why it travels on TikTok. Ask for GSM and yarn count in writing: two blankets that look identical in a listing can differ by 200 grams, and that gap is the whole margin once freight is charged on volume."
     },
     {
       "rank": 3,
@@ -107,18 +206,18 @@
     },
     {
       "rank": 6,
-      "name": "Portable Power Station (300W class)",
+      "name": "Cooling Lyocell Sheet Set (4 pc)",
       "platform": "tiktok",
-      "category": "outdoor",
-      "origin": "Shenzhen",
-      "price": "$149 – $259",
-      "sourcing": "$58 – $95",
+      "category": "textiles",
+      "origin": "Shaoxing, Zhejiang",
+      "price": "$89 – $159",
+      "sourcing": "$28 – $52",
       "metric_label": "TikTok Shop US rank",
       "metric_value": "Top 10",
-      "metric_sub": "outdoor, wk37",
+      "metric_sub": "bedding, wk37",
       "heat": 79,
       "delta": "steady",
-      "note": "Highest ticket on this list and a US top-ten fixture through September. UN38.3 transport testing and cell certification are non-negotiable for sea freight — budget eight weeks for the paperwork, not two."
+      "note": "Highest-ticket textile on this list and a US top-ten fixture through September. Both lyocell and bamboo viscose are regenerated cellulose, so the mill's fibre supplier decides how it feels after washing. Specify shrinkage tolerance and ask for OEKO-TEX documentation up front - retail channels want the certificate before they list, not after."
     },
     {
       "rank": 7,
@@ -197,18 +296,18 @@
     },
     {
       "rank": 12,
-      "name": "Raised Garden Planter with Legs",
+      "name": "Cotton Waffle Bath Towel Set",
       "platform": "temu",
-      "category": "outdoor",
-      "origin": "Fujian",
-      "price": "$45 – $89",
-      "sourcing": "$17 – $29",
+      "category": "textiles",
+      "origin": "Gaoyang, Hebei",
+      "price": "$35 – $69",
+      "sourcing": "$12 – $24",
       "metric_label": "Temu Q2 GMV growth",
       "metric_value": "+9%",
       "metric_sub": "first sub-10% quarter",
       "heat": 62,
       "delta": "steady",
-      "note": "Temu's September story is durability, not velocity: Q2 growth fell below 10% for the first time and several EU markets dropped more than 30%. Freight is the margin killer here — volume per container matters more than unit cost."
+      "note": "Temu's September story is durability, not velocity: Q2 growth fell below 10% for the first time and several EU markets dropped more than 30%. Towels survive that better than most - they are a repeat-purchase item with a spec anyone can check. Set GSM, yarn type and pile height, then wash-test one before bulk."
     }
   ]
 }

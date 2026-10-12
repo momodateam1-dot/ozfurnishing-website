@@ -426,3 +426,8 @@ body.nav-open{overflow:hidden}
   .buy-price-row{grid-template-columns:1fr;gap:5px;padding:17px 20px}
   .buy-price-row em{text-align:left}
 }
+
+/* Homepage category cards sit inside .section.ivory, whose colour would
+   otherwise render the card title near-black on the dark card surface. */
+.ivory .product-card .product-info h3{color:#f2ece0}
+.ivory .product-card:hover .product-info h3{color:var(--gold2)}

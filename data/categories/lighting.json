@@ -3,7 +3,7 @@
   "order": 4,
   "name": "Lighting & Lamps",
   "short_name": "Lighting",
-  "sub": "Pendant · Table · Architectural · Outdoor",
+  "sub": "Pendant · Table · Architectural · Contract",
   "card_desc": "Pendant lights, table and floor lamps, wall sconces and architectural fixtures sourced from the Zhongshan lighting belt.",
   "query_category": "Lighting & Lamps",
   "eyebrow": "Category 04 · Lighting sourcing from China",
@@ -19,7 +19,7 @@
     {"n": "03", "name": "Ceiling & Flush Mounts", "desc": "Flush and semi-flush ceiling lights, downlights and surface-mounted fixtures for circulation areas."},
     {"n": "04", "name": "Wall Sconces", "desc": "Interior and exterior wall lights, bathroom sconces and up-down wall washers, hard-wired or plug-in."},
     {"n": "05", "name": "Architectural & Linear", "desc": "Linear profiles, track systems, cove lighting and bespoke architectural fixtures built to a drawing."},
-    {"n": "06", "name": "Outdoor & Landscape", "desc": "Path lights, bollards, spike lights, garden lanterns and IP-rated exterior fixtures."}
+    {"n": "06", "name": "Commercial & Hospitality", "desc": "Reception and lobby feature lights, restaurant pendants, corridor and stairwell fixtures built to a schedule."}
   ],
   "mat_h2_a": "What it is made of",
   "mat_h2_em": "and what to ask for.",
@@ -52,7 +52,7 @@
     "Whether fixtures are hard-wired or plug-in, and who is installing them",
     "Colour temperature preference, usually 2700K warm to 4000K neutral",
     "Dimming requirement and which dimming protocol is already in the building",
-    "IP rating for bathrooms, covered outdoor areas and exposed exteriors"
+    "IP rating for bathrooms and other wet or high-humidity areas"
   ],
   "check_footnote": "If you are unsure about certification, tell us the country and the installer will usually know. We will confirm what the factory can supply.",
   "compare": {

@@ -234,7 +234,7 @@ def product_card(item, cat_name):
         item['delta'], 'flat')
     delta_txt = {'rising': 'Rising', 'new': 'New entry', 'steady': 'Holding'}
     badge = ''
-    if item['category'] in ('home', 'kitchen', 'outdoor'):
+    if item['category'] in ('home', 'kitchen', 'textiles'):
         badge = '<span class="tr-flag">OZ core category</span>'
     return (
         '<article class="tr-card" id="product-%d">'
@@ -375,8 +375,8 @@ def build_body(d, summaries, is_live):
         '<h2 class="tr-h2">What people are actually buying</h2>'
         '<div class="tr-split">'
         '<div><p class="tr-sub">Demand by category. Gold segments are the three '
-        'OZ core categories — home, kitchen and outdoor — where we already '
-        'hold supplier depth.</p>'
+        'OZ core categories — home, kitchen and home textiles — where we '
+        'already hold supplier depth.</p>'
         '<div class="tr-chart donut">%s</div></div>'
         '<div><p class="tr-sub">Retail price bands across the ranked list. The '
         '$10–$50 corridor carries the majority of volume: cheap enough to be '
