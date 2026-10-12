@@ -1,13 +1,28 @@
 # -*- coding: utf-8 -*-
-"""Build trending.html from data/trending.json.
+"""Build the /trending pages from data/trending/<YYYY-MM>.json.
 
 Run from the repository root:
 
     python tools/gen_trending.py
 
+One JSON file per month. The newest file becomes the current edition at
+/trending, and every edition also gets a permanent archive page at
+/trending/<YYYY-MM>. Nothing is ever overwritten when the month turns: last
+month's file simply stops being the newest one.
+
+    data/trending/2026-10.json   -> trending/2026-10.html   (archive)
+    data/trending/2026-11.json   -> trending.html           (current)
+                                    trending/2026-11.html   (archive, canonical -> /trending)
+
+The newest edition exists at two URLs on purpose: /trending is the live page
+readers land on, /trending/<period> is where that same edition retires to when
+the next month ships. The archive copy of the newest edition canonicalises to
+/trending so the pair is never treated as duplicate content; once a newer
+edition arrives it starts canonicalising to itself.
+
 The header and footer are copied out of index.html and patched, so the
 navigation and contact block can never drift away from the rest of the site.
-Every month: update data/trending.json, run this file, commit, push.
+Every month: add data/trending/<YYYY-MM>.json, run this file, commit, push.
 """
 
 import io
@@ -17,9 +32,11 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA = os.path.join(ROOT, 'data', 'trending.json')
+DATA_DIR = os.path.join(ROOT, 'data', 'trending')
 OUT = os.path.join(ROOT, 'trending.html')
+OUT_DIR = os.path.join(ROOT, 'trending')
 INDEX = os.path.join(ROOT, 'index.html')
+SITEMAP = os.path.join(ROOT, 'sitemap.xml')
 
 GOLD = '#c6a76b'
 GOLD_DEEP = '#a8874f'
@@ -47,6 +64,46 @@ def e(text):
 def read(path):
     with io.open(path, encoding='utf-8') as fh:
         return fh.read()
+
+
+# --------------------------------------------------------------------------
+# editions
+# --------------------------------------------------------------------------
+
+def load_editions():
+    """Load every monthly file, oldest first.
+
+    Sorting on the period string works because YYYY-MM sorts the same way
+    lexicographically and chronologically.
+    """
+    rows = []
+    for name in sorted(os.listdir(DATA_DIR)):
+        if not name.endswith('.json'):
+            continue
+        with io.open(os.path.join(DATA_DIR, name), encoding='utf-8') as fh:
+            d = json.load(fh)
+        rows.append(d)
+    rows.sort(key=lambda d: d['period'])
+    if not rows:
+        raise SystemExit('no editions found in %s' % DATA_DIR)
+    return rows
+
+
+def edition_summary(d):
+    """The numbers shown on the archive list."""
+    core = sum(c['share'] for c in d['categories'] if c['match'] == 'core')
+    return {
+        'period': d['period'],
+        'period_label': d['period_label'],
+        'updated': d['updated'],
+        'core': core,
+        'items': len(d['items']),
+        'platforms': len(d['platforms']),
+    }
+
+
+def core_share(d):
+    return sum(c['share'] for c in d['categories'] if c['match'] == 'core')
 
 
 # --------------------------------------------------------------------------
@@ -209,27 +266,75 @@ def product_card(item, cat_name):
          int(item['heat']), int(item['heat']), e(item['note']), badge)
 
 
-def build_body(d):
+def archive_list(summaries, current_period):
+    """Every edition, newest first. The current one points at /trending."""
+    rows = []
+    for s in reversed(summaries):
+        is_now = s['period'] == current_period
+        url = '/trending' if is_now else '/trending/%s' % s['period']
+        rows.append(
+            '<li%s><a href="%s">'
+            '<span class="tr-ed-per">%s</span>'
+            '<span class="tr-ed-meta">%d products · %d platforms · '
+            '%d%% core</span>'
+            '<span class="tr-ed-tag">%s</span>'
+            '<span class="tr-ed-arr">&rarr;</span>'
+            '</a></li>'
+            % (' class="current"' if is_now else '', url,
+               e(s['period_label']), s['items'], s['platforms'], s['core'],
+               'Current' if is_now else 'Archive'))
+    return (
+        '<section class="section ivory">'
+        '<div class="wrap">'
+        '<span class="tr-eyebrow dark">Archive</span>'
+        '<h2 class="tr-h2">Past editions</h2>'
+        '<p class="tr-sub">Every edition stays online after the month turns, '
+        'so you can read what was moving when you first looked — and see how '
+        'far it has run since.</p>'
+        '<ul class="tr-editions">%s</ul>'
+        '</div></section>'
+    ) % ''.join(rows)
+
+
+def build_body(d, summaries, is_live):
     cat_name = {c['key']: c['name'] for c in d['categories']}
-    core = sum(c['share'] for c in d['categories'] if c['match'] == 'core')
+    core = core_share(d)
+
+    # An archive page is a snapshot. Say so, and point back to the live page.
+    if is_live:
+        eyebrow = 'Monthly market signal'
+        archbar = ''
+        date_label, date_value = 'Next update', e(d['next_update'])
+    else:
+        eyebrow = 'Archive · Monthly market signal'
+        archbar = (
+            '<div class="tr-archbar">'
+            '<span>This is the <strong>%s</strong> edition, kept exactly as it '
+            'was published. The list has moved on since.</span>'
+            '<a href="/trending">Read the current edition &rarr;</a>'
+            '</div>'
+        ) % e(d['period_label'])
+        date_label, date_value = 'Published', e(d['updated'])
 
     hero = (
         '<section class="section tr-hero">'
         '<div class="wrap">'
-        '<span class="tr-eyebrow">Monthly market signal</span>'
+        '<span class="tr-eyebrow">%s</span>'
         '<h1 class="tr-h1">What\'s Selling from China — %s</h1>'
+        '%s'
         '<p class="tr-lede">Every month we read the public sales data from the '
         'marketplaces where Chinese-made goods actually move, and publish the '
         'short list worth sourcing. %d platforms, %d products, one question '
         'each: is this still worth buying into?</p>'
         '<div class="tr-metarow">'
         '<div><span>Updated</span><strong>%s</strong></div>'
-        '<div><span>Next update</span><strong>%s</strong></div>'
+        '<div><span>%s</span><strong>%s</strong></div>'
         '<div><span>Platforms read</span><strong>%d</strong></div>'
         '<div><span>Core-category share</span><strong>%d%%</strong></div>'
         '</div></div></section>'
-    ) % (e(d['period_label']), len(d['platforms']), len(d['items']),
-         e(d['updated']), e(d['next_update']),
+    ) % (eyebrow, e(d['period_label']), archbar,
+         len(d['platforms']), len(d['items']),
+         e(d['updated']), date_label, date_value,
          len(d['platforms']), core)
 
     plat_rows = ''.join(
@@ -321,10 +426,11 @@ def build_body(d):
         '</div></section>'
     ) % e(d['methodology'])
 
-    return hero + platform + demand + ranking + method
+    return hero + platform + demand + ranking + method \
+        + archive_list(summaries, d['period'])
 
 
-def build_ld(d):
+def build_ld(d, url, is_live):
     items = []
     for i, it in enumerate(d['items'], 1):
         items.append({
@@ -337,18 +443,20 @@ def build_ld(d):
                 'category': it['category'],
             },
         })
+    crumbs = [
+        {'@type': 'ListItem', 'position': 1, 'name': 'Home',
+         'item': 'https://ozfurnishing.com/'},
+        {'@type': 'ListItem', 'position': 2,
+         'name': "What's Selling from China",
+         'item': 'https://ozfurnishing.com/trending'},
+    ]
+    if not is_live:
+        crumbs.append({'@type': 'ListItem', 'position': 3,
+                       'name': d['period_label'], 'item': url})
     return json.dumps({
         '@context': 'https://schema.org',
         '@graph': [
-            {
-                '@type': 'BreadcrumbList',
-                'itemListElement': [
-                    {'@type': 'ListItem', 'position': 1, 'name': 'Home',
-                     'item': 'https://ozfurnishing.com/'},
-                    {'@type': 'ListItem', 'position': 2,
-                     'name': "What's Selling from China"},
-                ],
-            },
+            {'@type': 'BreadcrumbList', 'itemListElement': crumbs},
             {
                 '@type': 'ItemList',
                 'name': "Best-selling China-made products — %s"
@@ -361,19 +469,23 @@ def build_ld(d):
     }, ensure_ascii=False, indent=2)
 
 
-def main():
-    with io.open(DATA, encoding='utf-8') as fh:
-        d = json.load(fh)
+def render(d, summaries, is_live, canonical_url, header, footer):
+    url = 'https://ozfurnishing.com' + canonical_url
+    period = d['period_label']
+    if is_live:
+        title = "What's Selling from China — %s | OZ" % period
+        desc = ("Monthly ranking of the best-selling China-made products across "
+                "TikTok Shop, Amazon, Temu and AliExpress, with sourcing price "
+                "ranges and category demand data.")
+    else:
+        title = "What Sold from China in %s — Archive | OZ" % period
+        desc = ("The %s edition of our China best-seller ranking: %d products "
+                "across %d marketplaces, with the sourcing price ranges and "
+                "category demand data as published at the time."
+                % (period, len(d['items']), len(d['platforms'])))
+    desc = e(desc)
 
-    header, footer = build_chrome()
-
-    title = "What's Selling from China — %s | OZ" % d['period_label']
-    desc = ("Monthly ranking of the best-selling China-made products across "
-            "TikTok Shop, Amazon, Temu and AliExpress, with sourcing price "
-            "ranges and category demand data.")
-    desc = desc.replace('&', '&amp;')
-
-    page = u"""<!doctype html><html lang="en"><head><meta charset="utf-8">\
+    return u"""<!doctype html><html lang="en"><head><meta charset="utf-8">\
 <meta name="viewport" content="width=device-width,initial-scale=1">\
 <meta name="description" content="%(desc)s">\
 <meta name="theme-color" content="#090a09">
@@ -383,9 +495,9 @@ def main():
     <meta property="og:title" content="%(ogtitle)s">
     <meta property="og:description" content="%(desc)s">
     <meta property="og:image" content="https://ozfurnishing.com/assets/img/product-1.jpg">
-    <meta property="og:url" content="https://ozfurnishing.com/trending">
+    <meta property="og:url" content="%(url)s">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="canonical" href="https://ozfurnishing.com/trending">\
+    <link rel="canonical" href="%(url)s">\
 <title>%(title)s</title><link rel="stylesheet" href="/assets/style.css">
     <script type="application/ld+json">
 %(ld)s
@@ -401,18 +513,72 @@ def main():
         'desc': desc,
         'ogtitle': e(title),
         'title': e(title),
-        'ld': build_ld(d),
+        'url': url,
+        'ld': build_ld(d, url, is_live),
         'header': header,
         'footer': footer,
-        'body': build_body(d),
+        'body': build_body(d, summaries, is_live),
     }
 
+
+def update_sitemap(summaries, current_period):
+    """List one URL per archived edition, and only editions that are archived.
+
+    The block is rebuilt rather than appended to, because an edition can leave
+    the list: the newest one canonicalises to /trending, so listing its archive
+    URL would only produce a "discovered, not indexed" entry in Search Console.
+    When the month turns it becomes a normal archive with a self-canonical and
+    gets listed then. Rebuilding also keeps repeat runs idempotent.
+    """
+    sm = read(SITEMAP)
+    sm = re.sub(
+        r'[ \t]*<url>\s*<loc>https://ozfurnishing\.com/trending/[^<]*</loc>'
+        r'.*?</url>\n?',
+        '', sm, flags=re.S)
+    for s in summaries:
+        if s['period'] == current_period:
+            continue
+        entry = ('  <url>\n    <loc>https://ozfurnishing.com/trending/%s</loc>'
+                 '\n    <lastmod>%s</lastmod>\n  </url>\n'
+                 % (s['period'], s['updated']))
+        sm = sm.replace('</urlset>', entry + '</urlset>')
+    with io.open(SITEMAP, 'w', encoding='utf-8', newline='\n') as fh:
+        fh.write(sm)
+    return sm.count('<loc>')
+
+
+def main():
+    editions = load_editions()
+    summaries = [edition_summary(d) for d in editions]
+    latest = editions[-1]
+    header, footer = build_chrome()
+
+    if not os.path.isdir(OUT_DIR):
+        os.makedirs(OUT_DIR)
+
+    # The live page is always the newest edition.
+    page = render(latest, summaries, True, '/trending', header, footer)
     with io.open(OUT, 'w', encoding='utf-8', newline='\n') as fh:
         fh.write(page)
+    print('wrote %-34s %6d bytes  (current: %s)'
+          % ('trending.html', len(page.encode('utf-8')), latest['period']))
 
-    print('wrote %s (%d bytes)' % (OUT, len(page.encode('utf-8'))))
-    print('period: %s   items: %d   platforms: %d'
-          % (d['period'], len(d['items']), len(d['platforms'])))
+    # Every edition also gets a permanent archive page. The newest one
+    # canonicalises to /trending; older ones canonicalise to themselves.
+    for d in editions:
+        is_live = d['period'] == latest['period']
+        canon = '/trending' if is_live else '/trending/%s' % d['period']
+        page = render(d, summaries, False, canon, header, footer)
+        path = os.path.join(OUT_DIR, '%s.html' % d['period'])
+        with io.open(path, 'w', encoding='utf-8', newline='\n') as fh:
+            fh.write(page)
+        print('wrote %-34s %6d bytes  (canonical: %s)'
+              % ('trending/%s.html' % d['period'],
+                 len(page.encode('utf-8')), canon))
+
+    n = update_sitemap(summaries, latest['period'])
+    print('sitemap: %d urls' % n)
+    print('editions: %s' % ', '.join(d['period'] for d in editions))
 
 
 if __name__ == '__main__':
