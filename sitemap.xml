@@ -2,42 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ozfurnishing.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-10-12</lastmod>
   </url>
   <url>
-    <loc>https://ozfurnishing.com/c-sourcing.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ozfurnishing.com/c-sourcing</loc>
+    <lastmod>2026-10-12</lastmod>
   </url>
   <url>
-    <loc>https://ozfurnishing.com/b2b-procurement.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://ozfurnishing.com/b2b-procurement</loc>
+    <lastmod>2026-10-12</lastmod>
   </url>
   <url>
-    <loc>https://ozfurnishing.com/process.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://ozfurnishing.com/process</loc>
+    <lastmod>2026-10-12</lastmod>
   </url>
   <url>
-    <loc>https://ozfurnishing.com/about.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://ozfurnishing.com/about</loc>
+    <lastmod>2026-10-12</lastmod>
   </url>
   <url>
-    <loc>https://ozfurnishing.com/inquiry.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://ozfurnishing.com/inquiry</loc>
+    <lastmod>2026-10-12</lastmod>
   </url>
   <url>
-    <loc>https://ozfurnishing.com/privacy.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://ozfurnishing.com/privacy</loc>
+    <lastmod>2026-10-12</lastmod>
   </url>
   <url>
-    <loc>https://ozfurnishing.com/legal.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://ozfurnishing.com/legal</loc>
+    <lastmod>2026-10-12</lastmod>
   </url>
 </urlset>
