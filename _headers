@@ -8,6 +8,13 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Page paths are extension-less (/about, /sourcing/home-decor), so the
+# /*.html rule below never matches them and they would otherwise inherit the
+# edge default of s-maxage=604800. That is how a deleted page kept serving a
+# 200 from cache for a week after the file was removed. Revalidate every
+# non-asset path; /assets/* below overrides this for hashed static files.
 
 # --- HTML: always revalidate so edits ship immediately ---
 /*.html

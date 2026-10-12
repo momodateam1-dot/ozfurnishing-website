@@ -2,3 +2,8 @@
 https://www.ozfurnishing.com/*  https://ozfurnishing.com/:splat  301
 http://www.ozfurnishing.com/*   https://ozfurnishing.com/:splat  301
 http://ozfurnishing.com/*       https://ozfurnishing.com/:splat  301
+
+# The outdoor category page was removed in October 2026. Point the old URL at
+# the category index rather than leaving a 404 behind.
+/sourcing/outdoor-furniture       /sourcing  301
+/sourcing/outdoor-furniture.html  /sourcing  301
