@@ -1,0 +1,95 @@
+{
+  "slug": "furniture-interiors",
+  "order": 1,
+  "name": "Furniture & Interiors",
+  "short_name": "Furniture",
+  "sub": "Seating · Tables · Storage · Bedroom",
+  "card_desc": "Sofas, dining sets, beds, storage and contract seating sourced from the Foshan and Shunde furniture belt.",
+  "query_category": "Furniture & Interiors",
+  "eyebrow": "Category 01 · Furniture sourcing from China",
+  "h1": "China Furniture Sourcing<br><em>Seating, Tables &amp; Interior Pieces</em>",
+  "lead": "Furniture is the category where China is hardest to buy from without someone on the ground. Catalogues are huge, photographs are reused between factories, and the difference between a good batch and a bad one is usually in the frame, the foam and the finish — none of which show up in a listing. We buy furniture out of the Foshan and Shunde belt regularly, and we inspect it before it leaves.",
+  "badges": ["Foshan & Shunde Belt", "MOQ From 1 Piece", "Sealed Sample First"],
+  "sub_h2_a": "Six product lines",
+  "sub_h2_em": "we buy most often.",
+  "sub_intro": "These are the lines we quote most often in this category. If what you need sits between two of them, send the reference anyway — most first orders are mixed.",
+  "subcategories": [
+    {"n": "01", "name": "Seating", "desc": "Sofas, armchairs, dining chairs, benches and ottomans, upholstered or in solid wood, built to residential or contract standards."},
+    {"n": "02", "name": "Tables", "desc": "Dining, coffee, side and console tables in solid wood, veneer, metal, tempered glass, marble or sintered stone."},
+    {"n": "03", "name": "Storage", "desc": "Sideboards, cabinets, shelving systems, wardrobes and modular units, flat-pack or assembled."},
+    {"n": "04", "name": "Bedroom", "desc": "Beds, upholstered headboards, nightstands, dressers and mattress bases, including hotel room packages."},
+    {"n": "05", "name": "Upholstery & Soft Furnishings", "desc": "Cushions, throws, curtains, rugs and reupholstery programmes matched to a fabric or Pantone reference."},
+    {"n": "06", "name": "Contract & Hospitality Seating", "desc": "Restaurant, bar, lounge and lobby seating built to commercial durability and fire-retardancy requirements."}
+  ],
+  "mat_h2_a": "What it is made of",
+  "mat_h2_em": "and what to ask for.",
+  "mat_intro": "Most furniture disputes come down to a material that was described loosely. Naming the material, the finish and the standard up front is the cheapest quality control you can buy.",
+  "materials": [
+    {"n": "01", "name": "Solid wood", "note": "Oak, ash, walnut, rubberwood and beech. Ask for kiln-dried stock at 8–12% moisture content — anything wetter moves and cracks after it reaches a drier climate."},
+    {"n": "02", "name": "Engineered board", "note": "Plywood, MDF and particle board with veneer, melamine or lacquer. Cheaper and more dimensionally stable than solid wood; specify the formaldehyde class (E0, CARB or EPA) if your market requires it."},
+    {"n": "03", "name": "Metal", "note": "Steel, stainless steel and aluminium, powder-coated, brushed or plated. Check coating thickness and whether the frame is welded or bolted — it changes both strength and flat-pack feasibility."},
+    {"n": "04", "name": "Rattan, cane & woven", "note": "Natural rattan and cane webbing for interiors, PE rattan for outdoor. Natural material needs consistent grading, or colour drift shows across a container."},
+    {"n": "05", "name": "Upholstery", "note": "Polyester, linen blends and velvet fabrics, PU, and top-grain or split leather. Specify foam density, Martindale rub count and any fire-retardancy treatment your market requires."},
+    {"n": "06", "name": "Stone & sintered surfaces", "note": "Marble, granite, sintered stone and tempered glass for table tops and consoles. Heavy, fragile and usually worth crating rather than cartoning."}
+  ],
+  "buy_h2_a": "What the first order",
+  "buy_h2_em": "usually looks like.",
+  "buy_intro": "These are the numbers buyers ask for first. They are indicative ranges from recent orders, not a quotation — the real figures depend on the design, the finish and the factory slot.",
+  "buying": [
+    {"label": "Typical MOQ", "note": "Stocked designs usually start at one to ten pieces. Custom sizes, finishes or fabrics generally begin at ten to fifty units per model, because the factory has to set up a run.", "tag": "Indicative"},
+    {"label": "Lead time", "note": "Seven to fifteen days for stocked items after the deposit; thirty to forty-five days for made-to-order. Everything slows down in the weeks before Chinese New Year.", "tag": "Indicative"},
+    {"label": "Sampling", "note": "A finished sample is usually charged at one and a half to two times unit price plus courier, and is commonly credited back against the bulk order.", "tag": "Common practice"},
+    {"label": "Packaging", "note": "Flat-pack in export cartons with corner protection as standard. Assembled pieces, and anything with stone or glass, are worth a wooden crate.", "tag": "Ask upfront"},
+    {"label": "Compliance", "note": "EN 12520 and EN 12521 for strength and durability, BS 5852 or CA TB117 for fire retardancy, CARB or E0 for formaldehyde, FSC chain of custody on request.", "tag": "Market dependent"}
+  ],
+  "buy_footnote": "Treat these as the shape of a typical order, not a price list. We confirm the real figures with the factory before you commit to anything.",
+  "check_h2_a": "Six things worth",
+  "check_h2_em": "deciding before you ask.",
+  "check_intro": "The more of this you can send in the first message, the fewer rounds it takes to get to a number you can actually use.",
+  "checklist": [
+    "Room dimensions, door widths and stair access — oversized sofas and beds fail at delivery more often than at the factory",
+    "Intended use: residential, rental, hospitality or commercial, because it changes foam density, frame joints and fabric rub count",
+    "Finish and colour reference — a Pantone, RAL code or physical swatch beats a photograph every time",
+    "Fabric or leather specification, including Martindale rub count and any fire-retardancy requirement",
+    "Packaging preference: flat-pack for freight efficiency, or assembled and crated for immediate use",
+    "Target landed cost per piece, so we can quote to a number instead of guessing what you can absorb"
+  ],
+  "check_footnote": "Send whatever you have — a screenshot, a dimensions sketch or a half-finished list. Missing pieces we can fill in together; wrong assumptions are what cost time.",
+  "compare": {
+    "eyebrow": "Factory direct vs. buying desk",
+    "h2_a": "What changes",
+    "h2_em": "when we sit in between.",
+    "intro": "Plenty of buyers can reach a furniture factory on their own. The difference shows up after the first quotation, when the specification starts to matter.",
+    "diy_title": "Sourcing it yourself",
+    "diy": [
+      "One factory's price, with nothing to measure it against",
+      "Listing photos that rarely match the batch you actually receive",
+      "Foam density and frame construction you cannot verify from abroad",
+      "Damage discovered after the container lands, weeks later",
+      "Each factory ships separately, so freight is paid several times over"
+    ],
+    "oz_title": "Buying through OZ",
+    "oz": [
+      "Two or three factories quoted on identical terms, side by side",
+      "Pre-shipment inspection with photographs before the balance is released",
+      "Finish, fabric and foam confirmed against a sealed approved sample",
+      "Problems solved in China, while the goods are still here",
+      "Everything consolidated into one container and one document set"
+    ]
+  },
+  "faq_h2_a": "Before you send",
+  "faq_h2_em": "the first enquiry.",
+  "faq_intro": "These are the questions that come up on almost every furniture brief.",
+  "faq": [
+    {"q": "What is the minimum order for custom furniture?", "a": "It is set by the factory, not by us. Stocked designs can often be bought one piece at a time, while a custom size, finish or fabric usually needs ten to fifty units per model because the factory has to set up a production run. We confirm the real number with each factory before you commit."},
+    {"q": "Can you reproduce a design I saw somewhere else?", "a": "Usually yes, if you can send photographs, dimensions and any detail shots of the joints and finish. We will tell you honestly where a design can be matched closely and where the original uses a process or material that is not worth reproducing at your volume."},
+    {"q": "How much does it cost to ship furniture from China?", "a": "Furniture is bulky, so freight is charged on volume rather than weight for most sea shipments. A consolidated part-container load is far cheaper per piece than a small standalone shipment. We quote freight on the actual packed volume after consolidation, not on an estimate made before the goods are packed."},
+    {"q": "Do you handle hotel and project furniture?", "a": "Yes. Hotel, villa and restaurant furniture is bought against a BOQ and a handover date rather than a single product link, and it goes through our B2B buying flow with factory shortlisting, sampling and pre-shipment inspection included."}
+  ],
+  "related": ["home-decor", "outdoor-furniture", "lighting"],
+  "title": "China Furniture Sourcing | Seating, Tables & Interiors | OZ",
+  "desc": "Sourcing sofas, dining sets, beds and storage from the Foshan furniture belt. Materials, indicative MOQ, lead times and what the first order costs.",
+  "ld_service_name": "China Furniture Sourcing — Seating, Tables and Interior Furniture",
+  "ld_service_type": "China Furniture Sourcing",
+  "cta_note": "Send dimensions, quantities, finish references and your destination port. We will come back with factory options and an indicative landed cost per piece."
+}

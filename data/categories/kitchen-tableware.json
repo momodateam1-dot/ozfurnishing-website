@@ -1,0 +1,95 @@
+{
+  "slug": "kitchen-tableware",
+  "order": 5,
+  "name": "Kitchenware & Tableware",
+  "short_name": "Kitchenware",
+  "sub": "Dinnerware · Glassware · Cookware · Tools",
+  "card_desc": "Porcelain dinnerware, glassware, stainless cookware and kitchen tools sourced from Chaozhou, Yangjiang and Jieyang suppliers.",
+  "query_category": "Kitchenware & Tableware",
+  "eyebrow": "Category 05 · Kitchenware sourcing from China",
+  "h1": "China Kitchenware &amp; Tableware Sourcing<br><em>Dinnerware, Glassware &amp; Cookware</em>",
+  "lead": "Kitchenware is the category where the product is simple and the compliance is not. Anything that touches food has to be tested, anything fragile has to be packed properly, and anything sold as a set has to arrive with the right pieces in the right box. We buy tableware and cookware from the Chaozhou ceramic cluster and the Yangjiang and Jieyang metalwork suppliers, and we check both the documents and the breakage rate.",
+  "badges": ["Food-Contact Testing", "Breakage-Checked Packing", "Set & Open-Stock"],
+  "sub_h2_a": "Six product lines",
+  "sub_h2_em": "we buy most often.",
+  "sub_intro": "Most tableware buyers order a mix: one dinnerware range, one glassware range and a set of tools to fill the shelves around them.",
+  "subcategories": [
+    {"n": "01", "name": "Dinnerware Sets", "desc": "Porcelain, stoneware and bone china plates, bowls, mugs and serving pieces, sold as sets or as open stock."},
+    {"n": "02", "name": "Drinkware & Glassware", "desc": "Wine, water and tumbler glasses, mugs, cups and carafes in soda-lime, borosilicate and crystal glass."},
+    {"n": "03", "name": "Cookware", "desc": "Stainless, cast iron, carbon steel and non-stick pots, pans, woks and casseroles, with lid and handle options."},
+    {"n": "04", "name": "Cutlery & Flatware", "desc": "Stainless cutlery sets, serving pieces and steak knives in 304 or 430 stainless with mirror, matte or PVD finishes."},
+    {"n": "05", "name": "Kitchen Tools & Gadgets", "desc": "Utensils, peelers, boards, sieves, scales and prep tools in stainless, silicone, bamboo and plastic."},
+    {"n": "06", "name": "Storage & Food Prep", "desc": "Airtight containers, lunch boxes, pantry storage, measuring sets and prep bowls for retail and home use."}
+  ],
+  "mat_h2_a": "What it is made of",
+  "mat_h2_em": "and what to ask for.",
+  "mat_intro": "Material drives three outcomes here: whether it is safe for food contact, whether it survives a dishwasher, and how much of it arrives unbroken.",
+  "materials": [
+    {"n": "01", "name": "Porcelain & stoneware", "note": "The standard for dinnerware. Porcelain is fired harder and chips less; stoneware is thicker and more relaxed. Confirm glaze consistency across batches."},
+    {"n": "02", "name": "Bone china", "note": "Lighter and more translucent than porcelain, with a warm white tone. Popular for hotel and fine dining, and priced accordingly."},
+    {"n": "03", "name": "Glass", "note": "Soda-lime for everyday drinkware, borosilicate for heat resistance, lead-free crystal for premium ranges. Confirm dishwasher safety."},
+    {"n": "04", "name": "Stainless steel", "note": "304 for cookware and cutlery that must resist corrosion, 430 for cheaper flatware. Ask which grade is quoted, because the difference is invisible."},
+    {"n": "05", "name": "Cast iron & carbon steel", "note": "Enamelled or pre-seasoned. Heavy, durable and expensive to ship; worth consolidating with a larger order rather than sending alone."},
+    {"n": "06", "name": "Silicone, bamboo & plastic", "note": "Utensils, boards and storage. Confirm food-grade silicone and that any plastic is BPA-free if your market requires it."}
+  ],
+  "buy_h2_a": "What the first order",
+  "buy_h2_em": "usually looks like.",
+  "buy_intro": "Tableware pricing is driven by set size, decoration method and packing standard. These are the ranges buyers plan around.",
+  "buying": [
+    {"label": "Typical MOQ", "note": "Stocked plain sets often start at one to ten sets. Custom shapes, glazes or printed decoration usually begin at three hundred to one thousand pieces.", "tag": "Indicative"},
+    {"label": "Lead time", "note": "Ten to twenty days for stocked items; thirty to fifty days for decorated or made-to-order pieces, plus time for any testing.", "tag": "Indicative"},
+    {"label": "Sampling", "note": "A sample set is cheap and worth it. It settles weight, glaze, colour and whether the pieces stack the way you expect.", "tag": "Recommended"},
+    {"label": "Packaging", "note": "Divider pads between every piece, double-walled cartons and drop testing at volume. Retail gift boxes available where the order justifies it.", "tag": "Ask upfront"},
+    {"label": "Compliance", "note": "LFGB or FDA food-contact testing, dishwasher and microwave safety confirmation, and California Proposition 65 awareness for the US market.", "tag": "Essential"}
+  ],
+  "buy_footnote": "Breakage is the cost people forget. Proper dividers and double-walled cartons cost little per set and save a replacement shipment.",
+  "check_h2_a": "Six things worth",
+  "check_h2_em": "deciding before you ask.",
+  "check_intro": "Tableware briefs are simple, but the answers to these change both price and compliance.",
+  "checklist": [
+    "Set composition: how many place settings, and which pieces are in each one",
+    "Whether you need open stock for replacements, or a closed set only",
+    "Decoration method: plain, decal, hand-painted, reactive glaze or printed logo",
+    "Food-contact requirement for your market, and whether you need the test report",
+    "Dishwasher and microwave expectations, stated before production rather than after",
+    "Retail packaging: bulk packed, brown box, or gift boxed for shelf presentation"
+  ],
+  "check_footnote": "If this is for resale, tell us. Retail packaging, labelling and testing requirements are all cheaper to build in at the start.",
+  "compare": {
+    "eyebrow": "Bulk packed vs. properly specified",
+    "h2_a": "What changes",
+    "h2_em": "when the packing is written down.",
+    "intro": "Tableware failures are almost never about the product. They are about what happens to it between the factory and the shelf.",
+    "diy_title": "Ordering direct",
+    "diy": [
+      "Pieces nested without dividers, so chips are discovered on unpacking",
+      "No food-contact report, which retailers and customs can both ask for",
+      "Glaze and colour variation between batches nobody checked",
+      "Cartons too thin for the weight, failing at the bottom of the pallet",
+      "Replacement pieces unavailable because the set was never open stock"
+    ],
+    "oz_title": "Buying through OZ",
+    "oz": [
+      "Divider pads and double-walled cartons specified, with drop testing at volume",
+      "LFGB or FDA test report arranged for the market you are selling into",
+      "A sealed approved sample held as the reference for the bulk run",
+      "Carton weight and stacking checked before the pallet is built",
+      "Open stock ordered alongside the sets, so replacements stay possible"
+    ]
+  },
+  "faq_h2_a": "Before you send",
+  "faq_h2_em": "the first enquiry.",
+  "faq_intro": "These are the questions that decide whether a tableware order is sellable when it lands.",
+  "faq": [
+    {"q": "Is the tableware food-safe?", "a": "It can be, and for most markets it needs to be tested rather than assumed. We arrange LFGB or FDA food-contact testing on the actual production glaze and body, and we send you the report. If you are selling through a retailer, they will usually ask for it, so it is far cheaper to arrange before production than after."},
+    {"q": "Is it dishwasher and microwave safe?", "a": "Not automatically. Dishwasher and microwave safety depend on the glaze, the body and any decoration, especially metallic rims or decals. Tell us which you need and we will confirm it with the factory and mark it on the specification, rather than letting you find out at home."},
+    {"q": "How much breakage should I expect?", "a": "With proper dividers, double-walled cartons and sensible pallet stacking, breakage should be close to zero. Almost all the breakage we see comes from cost-cutting on packing, where a small saving per carton costs a replacement shipment. We photograph the packing before dispatch so you can see what was done."},
+    {"q": "Can I add my own logo or design?", "a": "Yes. Decals, printed logos and custom glazes are common, and they usually carry a setup cost plus a higher minimum quantity, typically three hundred pieces or more. If you are testing a design, buy plain stock first and add decoration once the shape has sold."}
+  ],
+  "related": ["home-decor", "hotel-ffe", "furniture-interiors"],
+  "title": "China Kitchenware & Tableware Sourcing | Food-Safe | OZ",
+  "desc": "Sourcing porcelain dinnerware, glassware, stainless cookware and kitchen tools from China. Food-contact testing and breakage-checked packing.",
+  "ld_service_name": "China Kitchenware and Tableware Sourcing — Dinnerware, Glassware and Cookware",
+  "ld_service_type": "China Kitchenware Sourcing",
+  "cta_note": "Send the set composition, decoration idea and destination market. We will confirm food-contact testing and quote the packed cartons."
+}

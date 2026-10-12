@@ -1,0 +1,95 @@
+{
+  "slug": "home-decor",
+  "order": 2,
+  "name": "Home Decor & Living",
+  "short_name": "Home Decor",
+  "sub": "Decor · Storage · Textiles · Accessories",
+  "card_desc": "Wall decor, mirrors, storage, textiles and decorative accessories bought from Yiwu, Chaozhou and Guangzhou suppliers.",
+  "query_category": "Home Decor & Living",
+  "eyebrow": "Category 02 · Home decor sourcing from China",
+  "h1": "China Home Decor Sourcing<br><em>Decor, Storage &amp; Everyday Living</em>",
+  "lead": "Decor is the easiest category to buy and the easiest to get wrong. Unit prices are low, catalogues are endless, and the real cost hides in breakage, mixed batches and freight charged on volume you did not expect. We buy decor across Yiwu, Chaozhou and Guangzhou suppliers, consolidate it in one warehouse and repack it so fragile pieces survive the trip.",
+  "badges": ["Small Batches Welcome", "Fragile-Safe Packing", "Mix Across Sellers"],
+  "sub_h2_a": "Six product lines",
+  "sub_h2_em": "we buy most often.",
+  "sub_intro": "Decor orders are almost always mixed. Most buyers send a list that touches three or four of these lines at once, which is exactly why consolidation matters.",
+  "subcategories": [
+    {"n": "01", "name": "Wall Decor & Mirrors", "desc": "Framed prints, mirrors, wall panels, metal wall art and decorative clocks, including oversized pieces that need crating."},
+    {"n": "02", "name": "Storage & Organisation", "desc": "Baskets, boxes, trays, shelving accessories, drawer organisers and wardrobe storage in woven, fabric or board construction."},
+    {"n": "03", "name": "Textiles & Soft Furnishings", "desc": "Cushions, throws, curtains, table linen, rugs and runners, matched to a colour or fabric reference."},
+    {"n": "04", "name": "Decorative Accessories", "desc": "Vases, bowls, trays, candle holders, sculptures and tabletop pieces in ceramic, glass, metal and resin."},
+    {"n": "05", "name": "Candles & Home Fragrance", "desc": "Scented candles, diffusers, reed sets and wax melts, with fragrance, vessel and packaging options."},
+    {"n": "06", "name": "Artificial Plants & Planters", "desc": "Artificial greenery, dried arrangements and planters in ceramic, fibre clay, metal and rattan."}
+  ],
+  "mat_h2_a": "What it is made of",
+  "mat_h2_em": "and what to ask for.",
+  "mat_intro": "In decor, the material decides three things at once: how it looks, how it survives freight, and whether it can clear your market's compliance checks.",
+  "materials": [
+    {"n": "01", "name": "Ceramic & porcelain", "note": "The backbone of decor and tableware. Ask about glaze consistency and firing quality — colour drift between batches is the most common complaint."},
+    {"n": "02", "name": "Glass", "note": "Mouth-blown, machine-pressed or tempered. Beautiful and fragile; packed properly it travels fine, packed cheaply it does not."},
+    {"n": "03", "name": "Metal", "note": "Iron, brass, aluminium and stainless, with powder-coating, plating or hand-finished patina. Check coating adhesion on pieces headed for humid climates."},
+    {"n": "04", "name": "Wood, bamboo & rattan", "note": "Mango wood, acacia, bamboo and natural rattan. Hand-finished pieces vary by batch, so approve a sample rather than a photograph."},
+    {"n": "05", "name": "Textiles", "note": "Cotton, linen, polyester and blends. Specify weight, weave and colour fastness, especially for anything that will be washed."},
+    {"n": "06", "name": "Resin & polyresin", "note": "Good for detailed shapes at low unit cost, and far more forgiving in transit than ceramic. Heavier than it looks, which affects freight."}
+  ],
+  "buy_h2_a": "What the first order",
+  "buy_h2_em": "usually looks like.",
+  "buy_intro": "Decor has the lowest entry cost of any category we buy, but freight is charged on volume. These are the ranges buyers plan around.",
+  "buying": [
+    {"label": "Typical MOQ", "note": "Stocked decor often starts at one to five pieces per design. Custom colours, prints or packaging usually begin at one hundred units or more.", "tag": "Indicative"},
+    {"label": "Lead time", "note": "Five to twelve days for stocked items once we have them in the warehouse; twenty to thirty-five days for made-to-order or printed pieces.", "tag": "Indicative"},
+    {"label": "Sampling", "note": "Samples are cheap in this category and worth buying. We hold them in the warehouse so your bulk order can be checked against the approved piece.", "tag": "Recommended"},
+    {"label": "Packaging", "note": "Fragile items get inner boxes, bubble wrap and corner protection, then a single export carton. Retail packaging can be removed to cut volume.", "tag": "Ask upfront"},
+    {"label": "Compliance", "note": "LFGB or FDA food-contact testing for tableware, REACH for coatings and dyes, and candle and fragrance labelling rules in your market.", "tag": "Market dependent"}
+  ],
+  "buy_footnote": "Unit prices are low enough that freight usually dominates. Consolidating a decor order is where most of the saving is found.",
+  "check_h2_a": "Six things worth",
+  "check_h2_em": "deciding before you ask.",
+  "check_intro": "Decor briefs go faster when the fragile and the bulky are separated from the start.",
+  "checklist": [
+    "Whether this is for resale, gifting or your own home, because it changes packaging and labelling requirements",
+    "Dimensions and weight per piece, especially for mirrors, planters and anything oversized",
+    "Which items are fragile, so we can pack those separately inside the consolidated carton",
+    "Whether retail packaging should stay on or be removed to reduce shipping volume",
+    "Any food-contact or coating requirement, if tableware or candles are part of the order",
+    "Whether you want one shipment or are happy to hold items in the warehouse until a second order arrives"
+  ],
+  "check_footnote": "Decor is the category where buyers most often underestimate freight. Tell us your landed-cost target and we will work backwards from it.",
+  "compare": {
+    "eyebrow": "Parcel by parcel vs. one consolidated shipment",
+    "h2_a": "What changes",
+    "h2_em": "when everything ships together.",
+    "intro": "Decor is usually bought from several sellers at once. How those parcels are combined is where the money is.",
+    "diy_title": "Ordering direct",
+    "diy": [
+      "Each seller ships separately, so international freight is paid several times",
+      "Breakage discovered at your door, with no practical way to claim it back",
+      "Retail packaging left in place, inflating the volume you are charged on",
+      "No photos before dispatch, so colour and finish are a surprise",
+      "Returns across borders cost more than the item is worth"
+    ],
+    "oz_title": "Buying through OZ",
+    "oz": [
+      "Everything held in one warehouse and shipped as a single consignment",
+      "Fragile pieces inspected, photographed and repacked before dispatch",
+      "Retail packaging removed where it only adds volume, on your approval",
+      "Photo report before anything leaves, so wrong items never ship",
+      "Breakage handled with the seller in China, while the goods are still here"
+    ]
+  },
+  "faq_h2_a": "Before you send",
+  "faq_h2_em": "the first enquiry.",
+  "faq_intro": "These come up on nearly every decor order.",
+  "faq": [
+    {"q": "Can I buy just a few pieces?", "a": "Yes. Stocked decor can usually be bought one to five pieces at a time, and there is no minimum order value. The only thing to watch is freight: a single small parcel costs disproportionately more per item than a consolidated box, so most buyers add a few more pieces once they see the numbers."},
+    {"q": "How do you pack fragile items?", "a": "Fragile pieces are individually wrapped, boxed and cushioned, then placed inside the consolidated export carton with the heavy items at the bottom. Mirrors, large ceramics and glass get corner protection or a wooden crate where the value justifies it, and we photograph the packing before dispatch."},
+    {"q": "Can I mix items from different sellers?", "a": "Yes, and it is what most decor orders look like. We receive parcels from each seller into our Guangdong warehouse, check them against your list, hold them until everything has arrived and then pack one shipment with one tracking number."},
+    {"q": "Do tableware and candles need certification?", "a": "They can. Tableware sold for food use usually needs LFGB or FDA food-contact testing, and candles and fragrances have labelling rules in most markets. Tell us where the goods are going and we will confirm what applies before you order rather than after."}
+  ],
+  "related": ["furniture-interiors", "kitchen-tableware", "lighting"],
+  "title": "China Home Decor Sourcing | Small Batches Welcome | OZ",
+  "desc": "Sourcing wall decor, mirrors, storage, textiles and accessories from China. Small batches, fragile-safe packing and consolidated shipping.",
+  "ld_service_name": "China Home Decor Sourcing — Decor, Storage and Accessories",
+  "ld_service_type": "China Home Decor Sourcing",
+  "cta_note": "Send a list, a set of links or a folder of screenshots. We will confirm what is available, flag the fragile pieces and quote the consolidated shipment."
+}

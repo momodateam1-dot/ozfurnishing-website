@@ -1,0 +1,95 @@
+{
+  "slug": "hotel-ffe",
+  "order": 6,
+  "name": "Hotel & Project FF&E",
+  "short_name": "Hotel FF&E",
+  "sub": "Guest Rooms · Lobbies · Restaurant · Resort",
+  "card_desc": "Contract-grade furniture, soft furnishings, lighting and outdoor sets procured against a BOQ and a handover date.",
+  "query_category": "Hotel FF&E",
+  "eyebrow": "Category 06 · Project and hospitality procurement",
+  "h1": "China Hotel FF&amp;E Procurement<br><em>Guest Rooms, Lobbies &amp; Resort Fit-Outs</em>",
+  "lead": "Hotel procurement is not furniture shopping at a larger size. It is a schedule: every item tied to a room type, a handover date and a fire-regulation standard, with a dozen factories feeding one container. We act as your buying office in China for this — reading the BOQ, shortlisting contract-capable factories, arranging samples, and inspecting before anything is loaded.",
+  "badges": ["BOQ & Drawing Led", "Contract-Grade Spec", "Room-Packed & Labelled"],
+  "sub_h2_a": "Six areas",
+  "sub_h2_em": "a typical fit-out covers.",
+  "sub_intro": "Most projects touch all six. The value of buying them together is that one consolidation warehouse and one inspection covers the whole schedule.",
+  "subcategories": [
+    {"n": "01", "name": "Guest Room Casegoods & Seating", "desc": "Beds, headboards, nightstands, desks, wardrobes, luggage benches and armchairs built to contract durability standards."},
+    {"n": "02", "name": "Lobby & Public Area", "desc": "Reception desks, lounge seating, console tables, feature pieces and planters for lobbies and circulation spaces."},
+    {"n": "03", "name": "Restaurant & Bar", "desc": "Dining tables and chairs, bar stools, banquette seating, host stands and service stations built for commercial use."},
+    {"n": "04", "name": "Soft Furnishings & Bedding", "desc": "Curtains, blackout linings, cushions, throws, rugs, mattresses, protectors, linen and towelling at specified counts."},
+    {"n": "05", "name": "Lighting & Decorative", "desc": "Bedside and desk lamps, pendants, wall sconces, mirrors and artwork, specified to the project's electrical standard."},
+    {"n": "06", "name": "Outdoor & Poolside", "desc": "Pool loungers, cabana sets, terrace dining and weather-rated pieces for resort and rooftop areas."}
+  ],
+  "mat_h2_a": "What it is specified in",
+  "mat_h2_em": "and why it matters.",
+  "mat_intro": "Contract specification exists because hotel furniture is used ten times harder than domestic furniture and is regulated more tightly. These are the lines that get written into a BOQ.",
+  "materials": [
+    {"n": "01", "name": "Contract-grade frames", "note": "Kiln-dried hardwood or reinforced engineered frames with screwed and glued joints rather than staples. Built for a commercial warranty, not a living room."},
+    {"n": "02", "name": "Commercial upholstery", "note": "Contract fabrics rated at 40,000 Martindale rubs or more, with foam density specified for the seat, not just the look."},
+    {"n": "03", "name": "Fire-retardant treatment", "note": "BS 5852 Crib 5 or CAL 117 depending on your market, applied to foam, fabric and filling. Ask for the certificate by item, not by supplier."},
+    {"n": "04", "name": "Casegoods surfaces", "note": "High-pressure laminate, veneer or lacquer on engineered board, specified for wear, cleanability and replacement cycles."},
+    {"n": "05", "name": "Metal & stone", "note": "Powder-coated steel and aluminium, stainless, marble and sintered stone for reception desks and high-traffic public areas."},
+    {"n": "06", "name": "Bedding & towelling", "note": "Thread count, GSM and fibre content specified per item, with commercial laundering durability in mind rather than retail softness."}
+  ],
+  "buy_h2_a": "What a project order",
+  "buy_h2_em": "usually looks like.",
+  "buy_intro": "Project procurement runs on a schedule rather than a product link. These are the ranges that shape the plan.",
+  "buying": [
+    {"label": "Typical MOQ", "note": "Procured against room count. Custom contract pieces generally begin at ten to thirty rooms per item, with stocked items available in smaller numbers.", "tag": "Indicative"},
+    {"label": "Lead time", "note": "Sixty to one hundred and twenty days from approved drawings to container loading, depending on how much is bespoke and how many factories are involved.", "tag": "Plan early"},
+    {"label": "Sampling", "note": "A mock-up room or a set of material samples is standard before bulk production. It is the single cheapest way to avoid a container of the wrong thing.", "tag": "Recommended"},
+    {"label": "Packaging", "note": "Room-packed and labelled by room type and floor, so installation crews unpack in sequence instead of sorting on site.", "tag": "Ask upfront"},
+    {"label": "Compliance", "note": "BS 5852 Crib 5 or CAL 117 fire retardancy, EN standards for contract seating, and electrical certification on all installed lighting.", "tag": "Essential"}
+  ],
+  "buy_footnote": "On a project, the schedule is the deliverable. We quote dates alongside prices, and we flag slippage as soon as a factory shows it.",
+  "check_h2_a": "Six things worth",
+  "check_h2_em": "deciding before you ask.",
+  "check_intro": "A BOQ is enough to start. These six answers turn it into a schedule we can hold a factory to.",
+  "checklist": [
+    "Room types and counts, with the item list per room type",
+    "Handover date, and whether installation is phased by floor or by wing",
+    "Fire-retardancy standard for your market, stated per item category",
+    "Which items are bespoke to a drawing and which can be bought from stock",
+    "Whether a mock-up room or material sample approval is required before bulk",
+    "Consolidation and shipping plan: one container, part load, or staged deliveries"
+  ],
+  "check_footnote": "Send the BOQ even if it is unfinished. We will tell you which lines are straightforward and which will drive the schedule.",
+  "compare": {
+    "eyebrow": "Factory-by-factory vs. one buying office",
+    "h2_a": "What changes",
+    "h2_em": "when one party owns the schedule.",
+    "intro": "A fit-out involves more factories than any buyer wants to manage individually. The risk is not price, it is timing and mismatch.",
+    "diy_title": "Managing it yourself",
+    "diy": [
+      "A dozen factories on a dozen schedules, each with its own slippage",
+      "Fire certificates collected item by item, often late",
+      "Colour and finish matched across factories by photograph",
+      "Separate shipments, so a room cannot be installed until all arrive",
+      "Balance paid before anything has been inspected"
+    ],
+    "oz_title": "Buying through OZ",
+    "oz": [
+      "One schedule owned by one party, with slippage flagged early",
+      "Fire and compliance documents collected per item before loading",
+      "A sealed approved sample or mock-up room as the reference standard",
+      "Everything consolidated, room-packed and labelled for installation",
+      "Pre-shipment AQL inspection with photos before the balance is released"
+    ]
+  },
+  "faq_h2_a": "Before you send",
+  "faq_h2_em": "the first BOQ.",
+  "faq_intro": "These are the questions project buyers ask before handing over drawings.",
+  "faq": [
+    {"q": "Can you pack and label by room?", "a": "Yes, and on a fit-out it is worth insisting on. We pack by room type and label by room and floor, so the installation crew unpacks in sequence instead of sorting a container on site. It costs a little more in the warehouse and saves considerably more in labour and delay at the other end."},
+    {"q": "How long does a hotel fit-out take to procure?", "a": "Sixty to one hundred and twenty days from approved drawings to container loading is typical, depending on how much is bespoke. Custom casegoods and upholstery drive the schedule; stocked items are much faster. We give you dated milestones at the start and flag any factory slippage as soon as it appears, not at the end."},
+    {"q": "Can you build a mock-up room first?", "a": "Yes, and we recommend it for anything bespoke. A mock-up room, or a full set of material and finish samples if a room is impractical, settles comfort, colour and build quality before a container is committed. It is the cheapest insurance available on a project of this size."},
+    {"q": "Will you work from our designer's drawings and BOQ?", "a": "Yes. We work from the designer's drawings, BOQ, FF&E schedule or reference images, and we will tell you where a specified item is difficult to source or better quoted elsewhere. We are also used to working under NDA, and will sign before any drawing is opened."}
+  ],
+  "related": ["furniture-interiors", "outdoor-furniture", "lighting"],
+  "title": "China Hotel FF&E Procurement | BOQ to Container | OZ",
+  "desc": "Hotel, villa and resort FF&E procurement from China. BOQ-led buying, contract-grade spec, room-packed labelling and pre-loading inspection.",
+  "ld_service_name": "China Hotel FF&E Procurement — Guest Rooms, Lobbies and Resort Fit-Outs",
+  "ld_service_type": "China Hotel FF&E Procurement",
+  "cta_note": "Send the BOQ, drawings or room schedule. We will tell you what is straightforward, what will drive the dates, and where the risks sit."
+}

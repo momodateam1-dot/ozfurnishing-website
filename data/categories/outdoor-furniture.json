@@ -1,0 +1,95 @@
+{
+  "slug": "outdoor-furniture",
+  "order": 3,
+  "name": "Outdoor Furniture & Living",
+  "short_name": "Outdoor Furniture",
+  "sub": "Garden · Patio · Balcony · Poolside",
+  "card_desc": "Rattan dining sets, aluminium lounge seating, teak, umbrellas and poolside furniture built for weather exposure.",
+  "query_category": "Outdoor Living",
+  "eyebrow": "Category 03 · Outdoor furniture sourcing from China",
+  "h1": "China Outdoor Furniture Sourcing<br><em>Garden, Patio &amp; Poolside Sets</em>",
+  "lead": "Outdoor furniture is bought on how it looks in a showroom and judged on how it survives a season outside. Frames rust, wicker fades, cushions soak and glass tops shatter — all failures that appear months after delivery. We buy outdoor sets from the Foshan and Ningbo suppliers who build for export markets, and we check frame coating, fabric rating and packing volume before anything ships.",
+  "badges": ["Weather-Rated Materials", "Flat-Pack Friendly", "Container Consolidation"],
+  "sub_h2_a": "Six product lines",
+  "sub_h2_em": "we buy most often.",
+  "sub_intro": "Outdoor orders tend to be sets rather than single pieces, which makes packing volume and container planning part of the first conversation.",
+  "subcategories": [
+    {"n": "01", "name": "Dining Sets", "desc": "Rattan, aluminium and teak dining tables with chairs or benches, in four, six and eight-seat configurations."},
+    {"n": "02", "name": "Lounge & Sofa Sets", "desc": "Modular corner sofas, daybeds, armchairs and coffee tables with weather-resistant cushions."},
+    {"n": "03", "name": "Benches & Seating", "desc": "Garden benches, patio chairs, bar stools, rocking chairs and foldable pieces for small balconies."},
+    {"n": "04", "name": "Umbrellas & Shade", "desc": "Market umbrellas, cantilever parasols, gazebos, pergolas and shade sails with bases and covers."},
+    {"n": "05", "name": "Planters & Outdoor Decor", "desc": "Fibre clay and ceramic planters, outdoor rugs, lanterns, fountains and decorative accents."},
+    {"n": "06", "name": "Poolside & Resort", "desc": "Sun loungers, side tables, cabana and poolside packages built for commercial and hospitality use."}
+  ],
+  "mat_h2_a": "What it is made of",
+  "mat_h2_em": "and where it fails.",
+  "mat_intro": "Outdoor furniture fails predictably. Knowing which material fails how — and asking for the right rating up front — is the whole game.",
+  "materials": [
+    {"n": "01", "name": "PE rattan wicker", "note": "Synthetic wicker woven over an aluminium frame. Ask for UV-stabilised PE with a stated warranty; cheap PE chalk and splits after one summer."},
+    {"n": "02", "name": "Aluminium", "note": "Powder-coated and rust-free, the safest frame for coastal and poolside use. Check coating thickness and that welds are ground smooth before coating."},
+    {"n": "03", "name": "Teak & acacia", "note": "Naturally oily hardwoods that weather to silver if left untreated. Confirm whether the timber is plantation-grown and ask for documentation if your market requires it."},
+    {"n": "04", "name": "Steel & wrought iron", "note": "Strong and heavy, but rusts the moment the coating is scratched. Fine inland, risky near salt water, and expensive to ship."},
+    {"n": "05", "name": "Textilene & outdoor fabric", "note": "Sling fabric and cushion covers rated for UV exposure and water resistance. Solution-dyed acrylic lasts far longer than printed polyester."},
+    {"n": "06", "name": "Glass & sintered tops", "note": "Tempered glass for table tops, sintered stone for heavier commercial settings. Both need proper crating to arrive intact."}
+  ],
+  "buy_h2_a": "What the first order",
+  "buy_h2_em": "usually looks like.",
+  "buy_intro": "Outdoor furniture is bulky, so freight is planned in cubic metres rather than cartons. These are the ranges buyers work to.",
+  "buying": [
+    {"label": "Typical MOQ", "note": "Stocked sets often start at one to five sets. Custom weave, fabric or frame colour generally begins at ten to thirty sets per model.", "tag": "Indicative"},
+    {"label": "Lead time", "note": "Fifteen to thirty days for stocked sets; thirty to fifty days for made-to-order. Order well ahead of the season — factories fill up months before peak demand.", "tag": "Plan early"},
+    {"label": "Sampling", "note": "A full set sample is expensive to courier, so many buyers approve a frame section, weave sample and fabric swatch instead.", "tag": "Common practice"},
+    {"label": "Packaging", "note": "Flat-pack and nested wherever possible to cut cubic metres. Glass and sintered tops are crated, and cushions are compressed to save space.", "tag": "Ask upfront"},
+    {"label": "Compliance", "note": "EN 581 for outdoor domestic seating, UV and colour-fastness ratings on fabric, and load ratings for commercial and resort use.", "tag": "Market dependent"}
+  ],
+  "buy_footnote": "Volume drives cost in this category. Two sets that look identical on a listing can differ by a third in packed cubic metres.",
+  "check_h2_a": "Six things worth",
+  "check_h2_em": "deciding before you ask.",
+  "check_intro": "Outdoor briefs go wrong on environment more often than on product. Answer these and the quote will be accurate the first time.",
+  "checklist": [
+    "Where the furniture will live: inland garden, coastal terrace, poolside or covered balcony",
+    "Whether it is for home use, rental turnover or commercial service, because it changes load and fabric ratings",
+    "Set configuration and how many seats you actually need, rather than how many look good in a photo",
+    "Frame material preference, and whether rust resistance matters more than weight",
+    "Cushion fabric expectation: shower-resistant, quick-dry or fully waterproof",
+    "Whether the pieces need to stack, fold or nest for storage in the off-season"
+  ],
+  "check_footnote": "Tell us the climate and the usage. A set specified for a dry courtyard will disappoint on a salt-water terrace, and we would rather say so now.",
+  "compare": {
+    "eyebrow": "Catalogue pick vs. specified order",
+    "h2_a": "What changes",
+    "h2_em": "when the spec is written down.",
+    "intro": "Outdoor furniture listings look alike because they use the same photographs. What separates them is the frame, the coating and the fabric rating.",
+    "diy_title": "Buying from a listing",
+    "diy": [
+      "Frame material described loosely, so steel arrives where aluminium was expected",
+      "No UV rating on the wicker or fabric, and fading shows in one season",
+      "Packed volume unknown until the freight invoice arrives",
+      "Cushions that soak through and stay wet for days",
+      "No inspection, so coating damage is found after a season outside"
+    ],
+    "oz_title": "Buying through OZ",
+    "oz": [
+      "Frame, coating and weave specified in writing before the deposit",
+      "UV and colour-fastness ratings confirmed with the factory",
+      "Packed volume measured before booking, so freight is quoted on fact",
+      "Cushion fabric chosen for the actual climate and usage",
+      "Pre-shipment inspection with photos, including frame and coating checks"
+    ]
+  },
+  "faq_h2_a": "Before you send",
+  "faq_h2_em": "the first enquiry.",
+  "faq_intro": "These are the questions that decide whether an outdoor order still looks good next year.",
+  "faq": [
+    {"q": "How long will outdoor furniture from China last?", "a": "It depends almost entirely on three choices: frame material, coating and fabric rating. Powder-coated aluminium with UV-stabilised PE rattan and solution-dyed acrylic cushions lasts many seasons, including near the coast. Untreated steel with cheap woven plastic and printed polyester cushions often does not survive one. We will tell you which is which before you buy."},
+    {"q": "Is the furniture waterproof or just weather-resistant?", "a": "Most outdoor furniture is weather-resistant rather than fully waterproof, which is a meaningful difference. Frames handle rain, but cushions need a quick-dry or solution-dyed fabric plus a cover if they will be left out. If you need furniture that stays outside uncovered all year, say so and we will specify it that way."},
+    {"q": "Why is shipping outdoor furniture so expensive?", "a": "Because you are shipping air as much as furniture. Sea freight on bulky goods is charged by volume, so a nested, flat-packed set costs far less to move than an assembled one. We measure the packed volume before booking and tell you the cubic metres, so you can see exactly what you are paying for."},
+    {"q": "Can I order a single set?", "a": "Yes. Stocked sets can usually be bought one at a time, and we will consolidate it with anything else you are buying. A single set does carry a higher freight cost per piece than a container, so if you are furnishing more than one area it is worth ordering them together."}
+  ],
+  "related": ["furniture-interiors", "home-decor", "hotel-ffe"],
+  "title": "China Outdoor Furniture Sourcing | Garden & Patio | OZ",
+  "desc": "Sourcing rattan, aluminium and teak outdoor furniture from China. Weather-rated materials, frame and fabric specified in writing, packed volume measured first.",
+  "ld_service_name": "China Outdoor Furniture Sourcing — Garden, Patio and Poolside",
+  "ld_service_type": "China Outdoor Furniture Sourcing",
+  "cta_note": "Tell us where the furniture will live and how it will be used. We will specify the frame, weave and fabric for that climate and quote the packed volume."
+}
