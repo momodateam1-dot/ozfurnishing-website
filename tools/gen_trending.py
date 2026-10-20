@@ -229,6 +229,11 @@ def price_columns(bands):
 # sections
 # --------------------------------------------------------------------------
 
+CAT_SLUG = {'home': '/sourcing/home-decor',
+            'kitchen': '/sourcing/kitchen-tableware',
+            'textiles': '/sourcing/bedding-textiles'}
+
+
 def product_card(item, cat_name):
     delta_cls = {'rising': 'up', 'new': 'new', 'steady': 'flat'}.get(
         item['delta'], 'flat')
@@ -236,6 +241,9 @@ def product_card(item, cat_name):
     badge = ''
     if item['category'] in ('home', 'kitchen', 'textiles'):
         badge = '<span class="tr-flag">OZ core category</span>'
+    slug = CAT_SLUG.get(item['category'])
+    cat_html = ('<a href="%s">%s</a>' % (slug, e(cat_name)) if slug
+                else e(cat_name))
     return (
         '<article class="tr-card" id="product-%d">'
         '<div class="tr-card-top">'
@@ -260,7 +268,7 @@ def product_card(item, cat_name):
     ) % (item['rank'], item['rank'], e(item['platform']),
          e(PLATFORM_LABEL.get(item['platform'], item['platform'])),
          delta_cls, e(delta_txt.get(item['delta'], item['delta'])),
-         e(item['name']), e(cat_name), e(item['origin']),
+         e(item['name']), cat_html, e(item['origin']),
          e(item['metric_label']), e(item['metric_value']), e(item['metric_sub']),
          e(item['price']), e(item['sourcing']),
          int(item['heat']), int(item['heat']), e(item['note']), badge)
@@ -421,6 +429,15 @@ def build_body(d, summaries, is_live):
         'checked, or recommend a product we cannot sample. Use this page as a '
         'starting conversation, not a purchase order.</p>'
         '</div>'
+        '<p class="tr-sub" style="margin-top:24px">Buying into any of these? '
+        'We source across <a href="/sourcing/furniture-interiors">furniture '
+        '&amp; interiors</a>, <a href="/sourcing/home-decor">home decor</a>, '
+        '<a href="/sourcing/bedding-textiles">bedding &amp; home textiles</a>, '
+        '<a href="/sourcing/lighting">lighting</a>, '
+        '<a href="/sourcing/kitchen-tableware">kitchenware &amp; tableware</a> '
+        'and <a href="/sourcing/hotel-ffe">hotel FF&amp;E</a>. Our '
+        '<a href="/china-furniture-sourcing">China furniture sourcing '
+        'guide</a> covers the clusters and materials behind them.</p>'
         '<a class="btn gold tr-cta" href="/inquiry">'
         'Ask us to source any of these <span class="arrow">↗</span></a>'
         '</div></section>'

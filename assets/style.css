@@ -431,3 +431,15 @@ body.nav-open{overflow:hidden}
    otherwise render the card title near-black on the dark card surface. */
 .ivory .product-card .product-info h3{color:#f2ece0}
 .ivory .product-card:hover .product-info h3{color:var(--gold2)}
+
+/* Pillar page: four-column reference tables (clusters, compliance).
+   Inline grid-template-columns would beat the 720px single-column collapse,
+   so the column count lives here behind a scoped class instead. */
+.pillar-cols-4 .buy-price-row{grid-template-columns:1.05fr 1.4fr .9fr 1.35fr}
+.pillar-cols-4 .buy-price-row em{text-transform:none;letter-spacing:0;font-size:11px;text-align:left;line-height:1.6}
+.pillar-cols-4 .buy-price-row>b{font-size:17px}
+@media(max-width:780px){
+  .pillar-cols-4 .buy-price-row{grid-template-columns:1fr;gap:5px;padding:17px 20px}
+  .pillar-cols-4 .buy-price-row em{text-align:left}
+  .pillar-cols-4 .buy-price-row>b{font-size:19px;margin-bottom:2px}
+}

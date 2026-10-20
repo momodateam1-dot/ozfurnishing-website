@@ -243,6 +243,11 @@ def related(d, lookup):
         '</div><p>Most buyers mix categories in the same shipment. These sit '
         'next to %s most often.</p></div>'
         '<div class="cards3">%s</div>'
+        '<p class="buy-lead" style="margin-top:26px">For the wider picture '
+        '&mdash; manufacturing clusters, material failure points, container '
+        'maths and the compliance stack by market &mdash; read our '
+        '<a href="/china-furniture-sourcing">China furniture sourcing '
+        'guide</a>.</p>'
         '</div></section>'
     ) % (e(d['name']), ''.join(cards))
 
@@ -409,6 +414,11 @@ def render_index(cats, header, footer):
         'what it is made of, what the first order realistically costs and '
         'how long it takes.</p></div>'
         '<div class="cards3">%(cards)s</div>'
+        '<p class="buy-lead" style="margin-top:26px">New to buying furniture '
+        'from China? Start with the <a href="/china-furniture-sourcing">'
+        'China furniture sourcing guide</a> &mdash; the six manufacturing '
+        'clusters, what each material costs and where it fails, the container '
+        'maths, and the compliance rules for the US, EU and UK.</p>'
         '</div></section>'
         '<section class="section ivory"><div class="wrap">'
         '<div class="section-header"><div>'
