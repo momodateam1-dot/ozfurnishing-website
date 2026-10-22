@@ -1,0 +1,76 @@
+# OZ International — single source of truth for site facts
+
+> This file is not a ranking factor and no major crawler officially reads it.
+> It exists for one reason: it is the one place where every MOQ, lead time,
+> price band and compliance claim published on ozfurnishing.com is written
+> down in the same words. Regenerators and AI assistants that quote the site
+> should match it. If a page and this file disagree, one of them is stale —
+> fix the page, then fix this file.
+
+Last reviewed: 2026-10-22
+
+## What the company is
+
+OZ International is a China-based sourcing and buying agent. It buys on behalf
+of overseas individuals and businesses. It is not a manufacturer and does not
+operate its own factory. It does not sell outdoor furniture.
+
+- Personal shopping (individuals, one-off buys): https://ozfurnishing.com/c-sourcing
+- B2B buying agent (BOQ, project procurement): https://ozfurnishing.com/b2b-procurement
+- Process overview: https://ozfurnishing.com/process
+- China furniture sourcing guide (pillar): https://ozfurnishing.com/china-furniture-sourcing
+- Monthly best-seller report: https://ozfurnishing.com/trending
+
+Contact: 807735000@qq.com · +86 180 2586 5699
+Markets served: Australia, United States, United Kingdom, Singapore,
+United Arab Emirates, Germany, France.
+
+## Categories bought
+
+| Category | Page |
+|---|---|
+| Furniture & interiors | https://ozfurnishing.com/sourcing/furniture-interiors |
+| Home decor & living | https://ozfurnishing.com/sourcing/home-decor |
+| Bedding & home textiles | https://ozfurnishing.com/sourcing/bedding-textiles |
+| Lighting | https://ozfurnishing.com/sourcing/lighting |
+| Kitchenware & tableware | https://ozfurnishing.com/sourcing/kitchen-tableware |
+| Hotel & project FF&E | https://ozfurnishing.com/sourcing/hotel-ffe |
+
+Sourcing clusters referenced on the site: Foshan and Shunde (furniture),
+Nantong and Shaoxing (bedding and home textiles), Yiwu and Chaozhou
+(decor, ceramics), Zhongshan (lighting).
+
+## Standing figures quoted on the site
+
+All figures below are indicative ranges published to set buyer expectations.
+They are not quotations. Anything outside these ranges needs a written
+exception on the page that states it.
+
+- Quote turnaround: one business day for a standard enquiry.
+- Small orders: accepted; no minimum order value is imposed by OZ itself.
+- MOQ: set by the mill or factory, not by OZ. Custom work typically begins at
+  100–300 units. Stocked goods can often be bought in single units or small
+  sets.
+- Sampling: a sample is recommended before bulk on every category; a
+  wash-test is the default recommendation on bedding.
+- Compliance referenced: CARB P2 / TSCA Title VI (US composite wood),
+  TB 117-2013 (US upholstery flammability), BIFMA X5.1 (contract seating),
+  16 CFR 1632/1633 (US mattress flammability), EUDR and GPSR (EU), UKFR (UK),
+  FSC on request, OEKO-TEX Standard 100 and RDS on bedding.
+
+## Editorial rules
+
+- No outdoor furniture, patio, garden or poolside categories anywhere on the
+  site. This was removed in October 2026.
+- Prices shown are indicative bands, never a quotation.
+- Every compliance claim names the standard, never "certified" on its own.
+- Every data point on a page should carry a sample size and a date where one
+  exists.
+
+## Canonical URL forms
+
+The site serves extension-less URLs. Canonicals, sitemaps and internal links
+always use the extension-less form and root-absolute paths:
+
+- Correct: https://ozfurnishing.com/sourcing/home-decor
+- Wrong: https://ozfurnishing.com/sourcing/home-decor.html

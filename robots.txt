@@ -1,4 +1,41 @@
+# Default: everything is open.
 User-agent: *
+Allow: /
+
+# ---------------------------------------------------------------------------
+# AI crawlers — explicitly allowed, not merely inherited.
+#
+# Google-Extended does NOT match "User-agent: *"; if it is not named here the
+# site is opted out of Gemini / AI Overviews grounding no matter what the
+# wildcard rule says. For a sourcing site the specifications and process
+# pages are not trade secrets — being cited is the asset, so every agent
+# below is named and allowed.
+# ---------------------------------------------------------------------------
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
 Allow: /
 
 Sitemap: https://ozfurnishing.com/sitemap.xml
