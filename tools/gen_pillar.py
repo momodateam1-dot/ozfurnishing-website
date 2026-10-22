@@ -133,9 +133,22 @@ COSTS = [
      'one, which is why packing is a cost line and not an afterthought.'),
 ]
 
+# Each standard below is linked to the body that publishes or enforces it.
+# Two are deliberately NOT linked: California TB 117-2013 (bhfti.ca.gov is not
+# reachable) and ANSI/BIFMA X5.1 (bifma.org returns 403 to every automated
+# request, so the target page cannot be verified). A guessed link is worse
+# than none — a buyer who clicks through and lands on a 404 stops trusting
+# the rest of the table. Re-check those two once a year; if they resolve,
+# link them here and nowhere else.
+EXT = ' target="_blank" rel="noopener"'
+
 COMPLIANCE = [
     ('United States', 'Composite wood',
-     'CARB Phase 2 and TSCA Title VI formaldehyde limits',
+     '<a href="https://ww2.arb.ca.gov/our-work/programs/'
+     'composite-wood-products-program"' + EXT + '>CARB Phase 2</a> and '
+     '<a href="https://www.epa.gov/formaldehyde/'
+     'formaldehyde-emission-standards-composite-wood-products"' + EXT +
+     '>TSCA Title VI</a> formaldehyde limits',
      'A third-party test report from SGS, BV or Intertek on the board '
      'supplier — not a factory certificate.'),
     ('United States', 'Upholstered goods',
@@ -146,22 +159,30 @@ COMPLIANCE = [
      'Cycle-test results on the gas lift and tilt mechanism, which is where '
      'low-cost chairs fail first.'),
     ('United States', 'Mattresses',
-     '16 CFR 1632 and 1633',
+     '<a href="https://www.ecfr.gov/current/title-16/chapter-II/subchapter-D/'
+     'part-1632"' + EXT + '>16 CFR 1632</a> and '
+     '<a href="https://www.ecfr.gov/current/title-16/chapter-II/subchapter-D/'
+     'part-1633"' + EXT + '>1633</a>',
      'Ignition resistance plus the label. Missing label requirements can get '
      'goods refused even when the product itself passes.'),
     ('European Union', 'Timber and wood-based furniture',
-     'EU Deforestation Regulation',
+     '<a href="https://environment.ec.europa.eu/topics/forests/'
+     'deforestation-regulation_en"' + EXT + '>EU Deforestation Regulation</a>',
      'Geolocation-based due diligence on the timber. The compliance date has '
      'been deferred more than once — confirm the current one for your '
      'company size before you plan a launch.'),
     ('European Union', 'All consumer products',
-     'General Product Safety Regulation',
+     '<a href="https://commission.europa.eu/business-economy-euro/'
+     'doing-business-eu/general-product-safety-regulation_en"' + EXT +
+     '>General Product Safety Regulation</a>',
      'Traceability records and an EU-based responsible person.'),
     ('United Kingdom', 'Domestic upholstered furniture',
-     'Furniture and Furnishings (Fire) (Safety) Regulations',
+     '<a href="https://www.legislation.gov.uk/uksi/1988/1324"' + EXT +
+     '>Furniture and Furnishings (Fire) (Safety) Regulations</a>',
      'UKFR test reports and the correct permanent labels.'),
     ('All markets', 'Wood sourcing claims',
-     'FSC chain of custody',
+     '<a href="https://fsc.org/en/chain-of-custody-certification"' + EXT +
+     '>FSC chain of custody</a>',
      'A certificate number you can look up, not a logo on a catalogue.'),
 ]
 
