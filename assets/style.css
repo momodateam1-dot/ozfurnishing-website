@@ -443,3 +443,15 @@ body.nav-open{overflow:hidden}
   .pillar-cols-4 .buy-price-row em{text-align:left}
   .pillar-cols-4 .buy-price-row>b{font-size:19px;margin-bottom:2px}
 }
+
+/* --- pillar: extractable data table (added 2026-10-23) -------------
+   Semantic <table> so the container-maths figures can be lifted
+   cleanly by AI answer engines. Scoped to .pillar-table; append-only.
+   ---------------------------------------------------------------- */
+.pillar-table-wrap{overflow-x:auto;margin:20px 0 0;-webkit-overflow-scrolling:touch}
+.pillar-table{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:15px;color:#e8e4d9}
+.pillar-table th,.pillar-table td{border:1px solid var(--line);padding:11px 14px;text-align:left;vertical-align:top}
+.pillar-table thead th{background:rgba(198,167,107,.14);color:var(--gold2);font-weight:700}
+.pillar-table tbody th{color:var(--white);font-weight:600}
+@media(max-width:720px){.pillar-table{font-size:13.5px}.pillar-table th,.pillar-table td{padding:9px 10px}}
+
