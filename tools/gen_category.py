@@ -28,6 +28,8 @@ import json
 import os
 import re
 
+from ld_common import organization_node
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(ROOT, 'data', 'categories')
 OUT_DIR = os.path.join(ROOT, 'sourcing')
@@ -315,6 +317,7 @@ def build_ld(d, url):
                     for q in d['faq']
                 ],
             },
+            organization_node(),
         ],
     }, ensure_ascii=False, indent=2)
 
@@ -472,6 +475,7 @@ def render_index(cats, header, footer):
                   'item': {'@type': 'Service', 'name': d['name'],
                            'url': '%s/sourcing/%s' % (SITE, d['slug'])}}
                  for i, d in enumerate(cats, 1)]},
+            organization_node(),
         ],
     }, ensure_ascii=False, indent=2)
     return u"""<!doctype html><html lang="en"><head><meta charset="utf-8">\

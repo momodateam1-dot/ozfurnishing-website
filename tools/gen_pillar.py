@@ -20,6 +20,8 @@ import json
 import os
 import re
 
+from ld_common import organization_node
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = 'https://ozfurnishing.com'
 SLUG = 'china-furniture-sourcing'
@@ -610,6 +612,7 @@ def build_ld():
                 for q, a in FAQ
             ],
         },
+        organization_node(),
     ]
     return json.dumps({'@context': 'https://schema.org', '@graph': graph},
                       ensure_ascii=False, indent=2)

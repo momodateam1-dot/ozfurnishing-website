@@ -31,6 +31,8 @@ import math
 import os
 import re
 
+from ld_common import organization_node
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(ROOT, 'data', 'trending')
 OUT = os.path.join(ROOT, 'trending.html')
@@ -482,6 +484,7 @@ def build_ld(d, url, is_live):
                 'numberOfItems': len(d['items']),
                 'itemListElement': items,
             },
+            organization_node(),
         ],
     }, ensure_ascii=False, indent=2)
 
