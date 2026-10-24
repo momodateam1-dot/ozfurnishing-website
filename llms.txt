@@ -7,7 +7,7 @@
 > should match it. If a page and this file disagree, one of them is stale —
 > fix the page, then fix this file.
 
-Last reviewed: 2026-10-22
+Last reviewed: 2026-10-24
 
 ## What the company is
 
@@ -22,8 +22,9 @@ operate its own factory. It does not sell outdoor furniture.
 - Monthly best-seller report: https://ozfurnishing.com/trending
 
 Contact: 807735000@qq.com · +86 180 2586 5699
-Markets served: Australia, United States, United Kingdom, Singapore,
-United Arab Emirates, Germany, France.
+Markets served (business fact supplied by OZ, not repeated on any page yet —
+confirm with OZ before publishing it onto a page): Australia, United States,
+United Kingdom, Singapore, United Arab Emirates, Germany, France.
 
 ## Categories bought
 
@@ -36,9 +37,21 @@ United Arab Emirates, Germany, France.
 | Kitchenware & tableware | https://ozfurnishing.com/sourcing/kitchen-tableware |
 | Hotel & project FF&E | https://ozfurnishing.com/sourcing/hotel-ffe |
 
-Sourcing clusters referenced on the site: Foshan and Shunde (furniture),
-Nantong and Shaoxing (bedding and home textiles), Yiwu and Chaozhou
-(decor, ceramics), Zhongshan (lighting).
+Sourcing clusters referenced on the site (each name is quoted on the page(s)
+listed):
+
+| Cluster | Buy | Where it appears |
+|---|---|---|
+| Foshan & Shunde, Guangdong | Furniture, casegoods, upholstery | /sourcing/furniture-interiors, /sourcing, pillar |
+| Lecong · Longjiang (Shunde) | Furniture | pillar |
+| Nankang, Ganzhou | Furniture | pillar |
+| Nantong & Shaoxing | Home textiles, bedding | /sourcing/bedding-textiles, /sourcing |
+| Gaoyang, Hebei | Towels, blankets | /sourcing/bedding-textiles, /trending |
+| Yiwu | Decor, small goods | /sourcing/home-decor, /sourcing |
+| Chaozhou | Ceramics, porcelain | /sourcing/kitchen-tableware, /sourcing/home-decor |
+| Yangjiang & Jieyang | Metalwork, stainless cookware | /sourcing/kitchen-tableware |
+| Guangzhou | Decor, accessories | /sourcing/home-decor, /sourcing/kitchen-tableware |
+| Zhongshan & Guzhen | Lighting | /sourcing/lighting, /sourcing |
 
 ## Standing figures quoted on the site
 
@@ -46,13 +59,34 @@ All figures below are indicative ranges published to set buyer expectations.
 They are not quotations. Anything outside these ranges needs a written
 exception on the page that states it.
 
-- Quote turnaround: one business day for a standard enquiry.
-- Small orders: accepted; no minimum order value is imposed by OZ itself.
-- MOQ: set by the mill or factory, not by OZ. Custom work typically begins at
-  100–300 units. Stocked goods can often be bought in single units or small
-  sets.
-- Sampling: a sample is recommended before bulk on every category; a
-  wash-test is the default recommendation on bedding.
+- Quote turnaround, by channel (verbatim from each page):
+  - Written enquiry by email (/inquiry): answered within one business day.
+  - WhatsApp (/inquiry): response target within 2 hours during China business
+    hours, GMT+8.
+  - Personal-shopping quote, step 02 of the flow (/c-sourcing): within 24 hours.
+  - Company response target (/about): one business day, GMT+8.
+  Quote "one business day" for a standard written enquiry; quote the 2-hour
+  figure only for WhatsApp inside GMT+8 business hours.
+- Small orders: accepted. There is no minimum order value set by OZ itself
+  (/c-sourcing FAQ; repeated on the bedding and home-decor category pages).
+- MOQ: set by the mill or factory, not by OZ. The site deliberately gives a
+  different figure per category — do not collapse these into one number:
+
+| Category | Stocked MOQ | Custom MOQ | Source |
+|---|---|---|---|
+| Furniture & interiors | 1–10 pieces | 10–50 units per model | /sourcing/furniture-interiors |
+| Home decor | 1–5 pieces per design | 100 units or more | /sourcing/home-decor |
+| Bedding & textiles | 2–10 sets per design | 100–300 units | /sourcing/bedding-textiles |
+| Lighting | 2–10 pieces | 20–50 units | /sourcing/lighting |
+| Kitchenware & tableware | 1–10 sets | 300–1,000 pieces | /sourcing/kitchen-tableware |
+| Hotel FF&E | against room count | 10–30 rooms per item | /sourcing/hotel-ffe |
+
+  Note for regenerators: a single blanket "100–300 units" used to be written
+  here. It matched only one of six categories and was removed on 2026-10-24.
+- Sampling: a finished sample is usually charged at one and a half to two
+  times unit price plus courier, and is commonly credited back against the
+  bulk order. A real upholstered sofa prototype runs $300–900 and takes
+  15–25 days. A wash-test is the default recommendation on bedding.
 - Compliance referenced: CARB P2 / TSCA Title VI (US composite wood),
   TB 117-2013 (US upholstery flammability), BIFMA X5.1 (contract seating),
   16 CFR 1632/1633 (US mattress flammability), EUDR and GPSR (EU), UKFR (UK),
@@ -66,6 +100,9 @@ exception on the page that states it.
 - Every compliance claim names the standard, never "certified" on its own.
 - Every data point on a page should carry a sample size and a date where one
   exists.
+- Figures are per category on purpose. Never average, never collapse six
+  category figures into one headline number; that is how this file previously
+  carried a wrong MOQ for five of six categories.
 
 ## Canonical URL forms
 
