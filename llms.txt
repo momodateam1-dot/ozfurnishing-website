@@ -22,9 +22,15 @@ operate its own factory. It does not sell outdoor furniture.
 - Monthly best-seller report: https://ozfurnishing.com/trending
 
 Contact: 807735000@qq.com · +86 180 2586 5699
-Markets served (business fact supplied by OZ, not repeated on any page yet —
-confirm with OZ before publishing it onto a page): Australia, United States,
-United Kingdom, Singapore, United Arab Emirates, Germany, France.
+Markets served: Australia, United States, United Kingdom, Singapore, United
+Arab Emirates, Germany, France. These are carried in the structured data on
+every page as ISO codes AU, US, GB, SG, AE, DE, FR — in `areaServed` on both
+the Organization node and each of the nine Service nodes. Note the asymmetry:
+the machine-readable layer names all seven markets, while the visible copy
+does not list them. That is fine for search, but do not quote "we serve these
+seven countries" as if it were a sentence published anywhere on the site.
+The registered legal entity name and registered address are deliberately not
+published; /privacy says a written copy is available on request by email.
 
 ## Categories bought
 
