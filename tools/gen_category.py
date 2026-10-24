@@ -247,7 +247,8 @@ def related(d, lookup):
         '&mdash; manufacturing clusters, material failure points, container '
         'maths and the compliance stack by market &mdash; read our '
         '<a href="/china-furniture-sourcing">China furniture sourcing '
-        'guide</a>.</p>'
+        'guide</a>. Or start again from the '
+        '<a href="/sourcing">full list of sourcing categories</a>.</p>'
         '</div></section>'
     ) % (e(d['name']), ''.join(cards))
 
@@ -425,7 +426,8 @@ def render_index(cats, header, footer):
         '<div class="eyebrow">Two ways to buy</div>'
         '<h2>Same categories.<br><em>Two buying routes.</em></h2>'
         '</div><p>The category tells us what to buy. The route tells us how '
-        'the order is handled.</p></div>'
+        'the order is handled. Both routes run on the same four steps, set '
+        'out in <a href="/process">how we work</a>.</p></div>'
         '<div class="buy-compare">'
         '<div class="buy-compare-col"><span class="tag">Personal shopping</span>'
         '<h3>A few items, bought for you</h3><ul>'

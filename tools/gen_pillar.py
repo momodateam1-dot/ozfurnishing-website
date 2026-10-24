@@ -527,7 +527,9 @@ def build_body():
       '<h2>Six categories.<br><em>One buying desk.</em></h2></div>'
       '<p>Each category page carries its own sub-categories, materials and '
       'failure points, indicative MOQ and lead times, and the packaging and '
-      'compliance notes specific to that product.</p></div>'
+      'compliance notes specific to that product. Start from the '
+      '<a href="/sourcing">sourcing categories index</a> to compare all six '
+      'side by side.</p></div>'
       '<div class="cards3">')
     for href, name, note in CATS:
         a('<div class="service-card"><h3>%s</h3><p>%s</p>'
