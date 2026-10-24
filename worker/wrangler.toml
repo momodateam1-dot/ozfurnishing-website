@@ -1,0 +1,41 @@
+# =============================================================================
+# OZ first-party analytics worker — Cloudflare Workers + D1 + Cron
+# -----------------------------------------------------------------------------
+# 部署 runbook（需要你自己的 Cloudflare 账号，本机无 token）：
+#
+#   1) 安装 wrangler（如未装）：  npm i -g wrangler
+#   2) 登录：                    wrangler login
+#   3) 进目录：                  cd worker
+#   4) 建 D1 库：                wrangler d1 create oz_analytics
+#      -> 把回显的 uuid 填进下方 database_id
+#   5) 建表：                    wrangler d1 execute oz_analytics --remote --file=schema.sql
+#                                wrangler d1 execute oz_analytics --local  --file=schema.sql
+#   6) 部署：                    wrangler deploy
+#   7) 绑定路由：在 CF 控制台 > Workers & Pages > oz-analytics > Triggers
+#      确认路由 ozfurnishing.com/a/* 已启用（wrangler.toml 里的 routes 也会自动建）。
+#   8) 设 Cron：Triggers 里应已出现 "30 0 * * *"（来自下方 [schedule]）。
+#   9) 本地验证：wrangler dev 后另开终端
+#      curl -X POST localhost:8787/a/collect -d '{"event":"page_view","page":"/test","v":"x","s":"y"}'
+#      curl 'localhost:8787/a/report?date=YYYY-MM-DD'
+#
+# 注意：Cron 用的是 UTC。00:30 UTC = 北京时间 08:30，聚合的是「刚结束的 UTC 一天」。
+# =============================================================================
+
+name = "oz-analytics"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+
+# 挂在主域名下的 /a/* 路径，beacon 与页面同域，免 CORS、免额外 DNS。
+# 其余路径仍由 Cloudflare Pages 提供，互不影响。
+routes = [
+  { pattern = "ozfurnishing.com/a/*" }
+]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "oz_analytics"
+database_id = "REPLACE_WITH_D1_ID"   # 第 4 步 wrangler d1 create 的回显 uuid
+
+# 每日 00:30 UTC 聚合昨天的第一方事件
+[schedule]
+crons = ["30 0 * * *"]

@@ -25,7 +25,64 @@
 (function () {
   'use strict';
 
+  /* ---------------------------------------------------------------- */
+  /* First-party beacon. Mirror every event into our own D1 via the    */
+  /* oz-analytics Worker, fully independent of GA4. If GA4 is blocked  */
+  /* the beacon still fires; if the Worker is unreachable the page is   */
+  /* untouched (sendBeacon losses are silent). This is the "self-built  */
+  /* data loop": we own the raw rows we can attribute and replay.       */
+  /* ---------------------------------------------------------------- */
+  var BEACON_URL = 'https://ozfurnishing.com/a/collect';
+
+  // Persistent anonymous visitor id (first-party only, no PII). Stays
+  // across visits so we can tell returning visitors from new ones.
+  var VISITOR = (function () {
+    try {
+      var k = 'oz_v';
+      var v = localStorage.getItem(k);
+      if (!v) {
+        v = 'v' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+        localStorage.setItem(k, v);
+      }
+      return v;
+    } catch (e) { return 'anon'; }
+  })();
+
+  // Per-visit session id, shared across tabs in a session.
+  var SESSION = (function () {
+    try {
+      var k = 'oz_s';
+      var s = sessionStorage.getItem(k);
+      if (!s) {
+        s = 's' + Math.random().toString(36).slice(2);
+        sessionStorage.setItem(k, s);
+      }
+      return s;
+    } catch (e) { return 's' + Math.random().toString(36).slice(2); }
+  })();
+
+  // Acquisition attribution, read once from the entry URL.
+  var ATTR = (function () {
+    var q = new URLSearchParams(location.search);
+    var src = q.get('utm_source') || q.get('ref');
+    if (!src) src = document.referrer ? 'referral' : 'direct';
+    return { source: src, medium: q.get('utm_medium') || '',
+             campaign: q.get('utm_campaign') || '' };
+  })();
+
+  function beacon(name, params) {
+    try {
+      if (!navigator.sendBeacon) return;
+      var p = Object.assign({ event: name, page: pageKey() }, params || {});
+      p.v = VISITOR; p.s = SESSION;
+      p.src = ATTR.source; p.med = ATTR.medium; p.cmp = ATTR.campaign;
+      navigator.sendBeacon(BEACON_URL,
+        new Blob([JSON.stringify(p)], { type: 'application/json' }));
+    } catch (e) {}
+  }
+
   function track(name, params) {
+    beacon(name, params);                 // first-party, always
     if (typeof window.gtag !== 'function') return;
     window.gtag('event', name, params || {});
   }
@@ -141,6 +198,14 @@
     document.addEventListener('DOMContentLoaded', watchForm);
   } else {
     watchForm();
+  }
+
+  /* First-party page view. GA4 records this separately; this is ours, so the
+     visit count and the per-page conversion funnel live in our own D1. */
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () { beacon('page_view', {}); });
+  } else {
+    beacon('page_view', {});
   }
 
   /* Scroll depth: a buyer who reaches 90% of the pillar page has done real
