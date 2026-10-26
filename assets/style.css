@@ -474,3 +474,20 @@ body.nav-open{overflow:hidden}
 @media(max-width:1050px){.gd-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.gd-grid{grid-template-columns:1fr}}
 
+/* Homepage "product series" block — scoped with ps- prefix (mirrors gd-).
+   Column counts live here, not inline, so the 520px collapse still works.
+   Append-only. */
+.ps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:18px;margin-top:46px}
+.ps-card{position:relative;border:1px solid rgba(198,167,107,.26);
+  background:linear-gradient(165deg,#15170f,#0b0c0a);padding:30px 26px 28px;
+  transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
+.ps-card:hover{transform:translateY(-6px);border-color:var(--gold);
+  box-shadow:0 18px 44px rgba(0,0,0,.5)}
+.ps-card .ps-num{font-family:var(--serif);font-size:15px;color:rgba(198,167,107,.5);display:block;margin-bottom:14px}
+.ps-card h3{font-family:var(--serif);font-weight:400;font-size:20px;line-height:1.25;
+  color:#e9e1d0;margin:0 0 12px}
+.ps-card p{margin:0;font-size:12.5px;line-height:1.85;color:#aaa99f}
+.ps-card.ps-feature{border-color:rgba(198,167,107,.62);background:linear-gradient(165deg,#1d1c12,#100f09)}
+.ps-card.ps-feature .ps-num{color:var(--gold)}
+@media(max-width:520px){.ps-grid{grid-template-columns:1fr}}
+
