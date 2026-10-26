@@ -455,3 +455,22 @@ body.nav-open{overflow:hidden}
 .pillar-table tbody th{color:var(--white);font-weight:600}
 @media(max-width:720px){.pillar-table{font-size:13.5px}.pillar-table th,.pillar-table td{padding:9px 10px}}
 
+/* ===== Homepage: Guangdong advantage band (added 2026-10-26) =====
+   Scoped with gd- prefix. Column counts live here, not inline, so the
+   720px single-column collapse still works. Append-only. */
+.gd-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:46px}
+.gd-card{position:relative;border:1px solid rgba(198,167,107,.26);
+  background:linear-gradient(165deg,#15170f,#0b0c0a);padding:30px 26px 28px;
+  transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
+.gd-card:hover{transform:translateY(-6px);border-color:var(--gold);
+  box-shadow:0 18px 44px rgba(0,0,0,.5)}
+.gd-card .gd-ico{width:34px;height:34px;color:var(--gold);margin-bottom:20px}
+.gd-card .gd-ico svg{width:100%;height:100%;display:block}
+.gd-card .gd-num{position:absolute;top:24px;right:24px;font-family:var(--serif);
+  font-size:15px;color:rgba(198,167,107,.5)}
+.gd-card h3{font-family:var(--serif);font-weight:400;font-size:21px;line-height:1.25;
+  color:#e9e1d0;margin:0 0 12px}
+.gd-card p{margin:0;font-size:12.5px;line-height:1.85;color:#aaa99f}
+@media(max-width:1050px){.gd-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.gd-grid{grid-template-columns:1fr}}
+
