@@ -3,7 +3,7 @@
   "period": "2026-10",
   "period_label": "October 2026",
   "updated": "2026-10-12",
-  "next_update": "2026-11-05",
+  "next_update": "2026-12-03",
   "methodology": "Rankings are compiled from the September 2026 public record: TikTok Shop US and UK weekly product charts as republished by EchoTik, FastMoss and cross-border trade press, Amazon US best-seller rank and search-velocity reporting, Temu best-seller roundups plus Temu's own Q2 GMV disclosure, and AliExpress order-velocity leaderboards. Unit and revenue figures are the most recent published values, not live API pulls. Platform percentages are year-on-year where published and quarter-on-quarter or month-on-month where that is all that was reported; Amazon, Shein, AliExpress and TikTok Shop UK/EU move on quarterly disclosure cycles and may lag the reporting month. Where a platform published nothing new this month, the previous edition's figure is carried forward and flagged on the card rather than replaced with a guess. Category shares, retail price bands and every sourcing range are OZ estimates derived from those same public reports and are marked as such.",
   "platforms": [
     {

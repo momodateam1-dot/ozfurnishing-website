@@ -343,7 +343,7 @@ def render(d, lookup, header, footer):
     <script type="application/ld+json">
 %(ld)s
     </script>
-</head><body><div class="topline"><div class="wrap"><span>OZ INTERNATIONAL &nbsp; / &nbsp; CHINA SOURCING &amp; TRADE</span><span class="right"><span class="accent">A DIRECT LINE TO CHINA</span> &nbsp; · &nbsp; GLOBAL BUYER SUPPORT</span></div></div>
+</head><body><div class="topline"><div class="wrap"><span>OZ INTERNATIONAL &nbsp; / &nbsp; CHINA SOURCING · CONSOLIDATION · GLOBAL SHIPPING</span><span class="right"><span class="accent">A DIRECT LINE TO CHINA</span> &nbsp; · &nbsp; GLOBAL BUYER SUPPORT</span></div></div>
 %(header)s<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div><main>
 %(body)s
 </main>
@@ -495,7 +495,7 @@ def render_index(cats, header, footer):
     <script type="application/ld+json">
 %(ld)s
     </script>
-</head><body><div class="topline"><div class="wrap"><span>OZ INTERNATIONAL &nbsp; / &nbsp; CHINA SOURCING &amp; TRADE</span><span class="right"><span class="accent">A DIRECT LINE TO CHINA</span> &nbsp; · &nbsp; GLOBAL BUYER SUPPORT</span></div></div>
+</head><body><div class="topline"><div class="wrap"><span>OZ INTERNATIONAL &nbsp; / &nbsp; CHINA SOURCING · CONSOLIDATION · GLOBAL SHIPPING</span><span class="right"><span class="accent">A DIRECT LINE TO CHINA</span> &nbsp; · &nbsp; GLOBAL BUYER SUPPORT</span></div></div>
 %(header)s<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div><main>
 %(body)s
 </main>

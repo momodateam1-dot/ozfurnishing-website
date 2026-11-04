@@ -60,8 +60,9 @@ def organization_node():
             'width': 512,
             'height': 512,
         },
-        'description': ('China sourcing agent and buying partner for furniture, '
-                        'home decor, home textiles and project procurement.'),
+        'description': ('China sourcing, freight consolidation and global '
+                        'shipping partner for furniture, home decor, home '
+                        'textiles and project procurement.'),
         'sameAs': load_sameas(),
         'email': '807735000@qq.com',
         'telephone': '+86-180-2586-5699',
