@@ -499,9 +499,12 @@ def render(d, summaries, is_live, canonical_url, header, footer):
                 "ranges and category demand data.")
     else:
         title = "What Sold from China in %s — Archive | OZ" % period
+        # Keep this inside the 130-165 char SERP window for every month label
+        # (longest label, "September 2026", gives 161). Archive pages are real
+        # sitemap URLs once the month turns, so they get audited daily.
         desc = ("The %s edition of our China best-seller ranking: %d products "
-                "across %d marketplaces, with the sourcing price ranges and "
-                "category demand data as published at the time."
+                "across %d marketplaces, with sourcing price ranges and demand "
+                "data as published then."
                 % (period, len(d['items']), len(d['platforms'])))
     desc = e(desc)
 
