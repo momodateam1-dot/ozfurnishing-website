@@ -1,0 +1,313 @@
+{
+  "schema": 1,
+  "period": "2026-11",
+  "period_label": "November 2026",
+  "updated": "2026-11-05",
+  "next_update": "2026-12-03",
+  "methodology": "Rankings are compiled from the October 2026 public record: Kalodata TikTok Shop 24-market weekly product charts (weeks of Oct 19-25 and Oct 26-Nov 1), TikTok Shop US weekly charts for Oct 12-18 as republished by cross-border trade press, EchoTik's Q3 tally (15 markets, roughly $32B GMV, up 3% quarter on quarter, with the US at $7.5-8B), Amazon Prime Big Deal Days deal reporting for Oct 6-7 plus best-seller badges observed mid-October, Temu's Q3 semi-managed disclosure alongside seller-reported October traffic data, Copyfy's October dropshipping list built on AliExpress real-time sales, and the Accio (Oct 11) and AliShopping Tools (Oct 9) trend analyses. Unit and revenue figures are the most recent published values, not live API pulls. Platform percentages are year-on-year where published and quarter-on-quarter or month-on-month where that is all that was reported; Amazon, Shein and TikTok Shop UK/EU move on quarterly disclosure cycles and may lag the reporting month. Where a platform published nothing new this month, the previous edition's figure is carried forward and flagged on the card rather than replaced with a guess. Category shares, retail price bands and every sourcing range are OZ estimates derived from those same public reports and are marked as such.",
+  "platforms": [
+    {
+      "key": "tiktok",
+      "name": "TikTok Shop",
+      "region": "US",
+      "heat": 93,
+      "delta": "+62%",
+      "note": "No fresh year-on-year disclosure, so the Q3 figure is carried forward; EchoTik puts Q3 across 15 markets at about $32B GMV, up 3% quarter on quarter, with the US at $7.5-8B. Beauty still dominates, but home bedding and power stations took multiple top-ten slots in late October."
+    },
+    {
+      "key": "amazon",
+      "name": "Amazon",
+      "region": "US",
+      "heat": 86,
+      "delta": "+8%",
+      "note": "Carried-forward Q3 growth rate; no new YoY disclosure. Prime Big Deal Days on Oct 6-7 pulled kitchen and storage demand forward, FBA fulfilment fees rose on Oct 15, and Black Friday inbound cutoffs closed mid-month."
+    },
+    {
+      "key": "temu",
+      "name": "Temu",
+      "region": "US / EU",
+      "heat": 58,
+      "delta": "+9%",
+      "note": "The Q2 growth rate is carried forward, but October itself was rough: US semi-managed sellers reported traffic falling to less than half of September from mid-month, EU sellers reported drops above 30%, and the platform published no explanation. Q3 semi-managed GMV share reached 47%."
+    },
+    {
+      "key": "aliexpress",
+      "name": "AliExpress",
+      "region": "Global",
+      "heat": 72,
+      "delta": "+9%",
+      "note": "No new growth disclosure, so the previous figure is carried forward. October trend lists (Copyfy, Accio, AliShopping Tools) all point the same way: winter-comfort goods, kitchen tools and home lighting are the categories rising before Double 11 and Black Friday."
+    },
+    {
+      "key": "shein",
+      "name": "Shein",
+      "region": "US / EU",
+      "heat": 55,
+      "delta": "+1%",
+      "note": "No new disclosure since the interim report, so the H1 figure is carried forward. Home continues to expand off a small base."
+    },
+    {
+      "key": "tiktok_eu",
+      "name": "TikTok Shop",
+      "region": "UK / EU",
+      "heat": 56,
+      "delta": "+64%",
+      "note": "The UK growth rate is carried forward, but October weekly charts confirm the structure: a home-goods chart, not a beauty chart. Treadmills, anti-slip rugs, Shark heating and cooling, cordless vacuums, Christmas gift boxes and, in the week of Oct 26-Nov 1, BLUETTI at number one."
+    }
+  ],
+  "categories": [
+    {
+      "key": "home",
+      "name": "Home & Living",
+      "share": 25,
+      "delta": "-1",
+      "match": "core"
+    },
+    {
+      "key": "beauty",
+      "name": "Beauty & Personal Care",
+      "share": 19,
+      "delta": "-2",
+      "match": "adjacent"
+    },
+    {
+      "key": "kitchen",
+      "name": "Kitchen & Dining",
+      "share": 17,
+      "delta": "+1",
+      "match": "core"
+    },
+    {
+      "key": "textiles",
+      "name": "Home Textiles & Bedding",
+      "share": 17,
+      "delta": "+2",
+      "match": "core"
+    },
+    {
+      "key": "auto",
+      "name": "Auto & Tools",
+      "share": 9,
+      "delta": "+1",
+      "match": "adjacent"
+    },
+    {
+      "key": "pet",
+      "name": "Pet",
+      "share": 5,
+      "delta": "-1",
+      "match": "adjacent"
+    },
+    {
+      "key": "other",
+      "name": "Everything else",
+      "share": 8,
+      "delta": "0",
+      "match": "off"
+    }
+  ],
+  "price_bands": [
+    {
+      "label": "$1 – $10",
+      "share": 7
+    },
+    {
+      "label": "$10 – $25",
+      "share": 23
+    },
+    {
+      "label": "$25 – $50",
+      "share": 34
+    },
+    {
+      "label": "$50 – $100",
+      "share": 18
+    },
+    {
+      "label": "$100 +",
+      "share": 18
+    }
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "name": "Solar Copper Wire Fairy Lights (80 ft, 240 LED, 2-pack)",
+      "platform": "tiktok",
+      "category": "home",
+      "origin": "Ningbo, Zhejiang",
+      "price": "$15 – $29",
+      "sourcing": "$2.50 – $4.80",
+      "metric_label": "Cumulative orders",
+      "metric_value": "27,800",
+      "metric_sub": "$397K GMV, US LED #6",
+      "heat": 88,
+      "delta": "rising",
+      "note": "Climbed to number six on the US LED-keyword sales chart with a solar-plus-waterproof pitch aimed at yards, fences and camping. Trade press puts the price gap against the same item on 1688 at close to six times. Solar panel capacity and the IP waterproof rating are what decide the return rate; Christmas before-and-after content is the entire demand engine from here."
+    },
+    {
+      "rank": 2,
+      "name": "Washed Cotton Bedding Set (duvet + cases)",
+      "platform": "tiktok",
+      "category": "textiles",
+      "origin": "Nantong, Jiangsu",
+      "price": "$59 – $129",
+      "sourcing": "$16 – $34",
+      "metric_label": "TikTok Shop US rank",
+      "metric_value": "Top 10",
+      "metric_sub": "home bedding, wk of Oct 19-25",
+      "heat": 84,
+      "delta": "rising",
+      "note": "Home bedding took multiple top-ten slots in the Kalodata US weekly chart for Oct 19-25, the clearest non-beauty signal of the month. Specify shrinkage tolerance in writing and ask for azo-free dye documentation; the stone-wash cycle count is what makes washed cotton feel expensive, and two mills at the same price will not ship the same hand-feel."
+    },
+    {
+      "rank": 3,
+      "name": "Sherpa / Fleece Throw Blanket",
+      "platform": "amazon",
+      "category": "textiles",
+      "origin": "Changzhou, Jiangsu",
+      "price": "$20 – $45",
+      "sourcing": "$5.50 – $11.00",
+      "metric_label": "Search growth MoM",
+      "metric_value": "+576%",
+      "metric_sub": "blankets, early Oct cold snap",
+      "heat": 82,
+      "delta": "rising",
+      "note": "Trade-press October trackers put blanket searches up 576% month on month at the first cold-snap inflection, earlier than last year. Get GSM and yarn spec in writing, run a pilling test before bulk, and ask for OEKO-TEX up front - retail channels want the certificate before they list, not after."
+    },
+    {
+      "rank": 4,
+      "name": "Music Boxing Machine (wall-mount, Bluetooth)",
+      "platform": "tiktok",
+      "category": "other",
+      "origin": "Yongkang, Zhejiang",
+      "price": "$39 – $79",
+      "sourcing": "$11 – $19",
+      "metric_label": "Lifetime units",
+      "metric_value": "120,000+",
+      "metric_sub": "$3.68M+ GMV tracked",
+      "heat": 78,
+      "delta": "steady",
+      "note": "A long-running viral fitness SKU rather than a new spike, with trade-press tracking at over 120k cumulative units. Yongkang owns this supply chain. Foam-pad density, the Bluetooth module's FCC / CE paperwork and the wall-anchor kit are the three failure points; a machine that tears out of drywall is a refund with freight attached."
+    },
+    {
+      "rank": 5,
+      "name": "Portable Power Station (1 kWh class)",
+      "platform": "tiktok",
+      "category": "auto",
+      "origin": "Shenzhen, Guangdong",
+      "price": "$299 – $599",
+      "sourcing": "$120 – $230",
+      "metric_label": "TikTok Shop US rank",
+      "metric_value": "Top 10 (2 SKUs)",
+      "metric_sub": "wk of Oct 26-Nov 1",
+      "heat": 76,
+      "delta": "rising",
+      "note": "Two power-station SKUs sat in the US weekly top ten in the final October week, riding storm-season and camping demand into the holidays. This is a certification-heavy category: UN38.3 transport documents and UL 2743 are the baseline, and grey-market battery cells are where the margin trap hides - ask which cell grade is quoted before comparing prices."
+    },
+    {
+      "rank": 6,
+      "name": "Detachable-Handle Nonstick Cookware Set (19 pc)",
+      "platform": "amazon",
+      "category": "kitchen",
+      "origin": "Wuyi, Zhejiang",
+      "price": "$50 – $85",
+      "sourcing": "$17 – $29",
+      "metric_label": "Prime Big Deal Days",
+      "metric_value": "-43%",
+      "metric_sub": "$56.98 promo, Oct 6-7",
+      "heat": 74,
+      "delta": "rising",
+      "note": "A featured Prime Big Deal Days deal at 43% off, the sharpest kitchen discount of the event. Detachable-handle sets are Amazon's cookware growth story because they photograph flat and ship in one box. Coating PFOA-free test report, handle lock-cycle durability and base flatness are the specs that keep returns low - a warped base shows up in one-star reviews within weeks."
+    },
+    {
+      "rank": 7,
+      "name": "Bamboo Cutting Board with Storage Rack",
+      "platform": "amazon",
+      "category": "kitchen",
+      "origin": "Yangjiang, Guangdong",
+      "price": "$25 – $40",
+      "sourcing": "$8 – $14",
+      "metric_label": "Amazon best seller",
+      "metric_value": "Kitchen & Dining #1",
+      "metric_sub": "as of mid-Oct",
+      "heat": 71,
+      "delta": "steady",
+      "note": "Held the number-one slot in Kitchen & Dining best sellers through October. Yangjiang owns the bamboo-and-knife supply chain. Carbonisation quality is what stops mould, the glue layer needs a food-safe certification, and bamboo boards are graded by strip quality - check the edge strips on a physical sample, not the listing photo."
+    },
+    {
+      "rank": 8,
+      "name": "Heated Car Seat Cushion (12V)",
+      "platform": "aliexpress",
+      "category": "auto",
+      "origin": "Taizhou, Zhejiang",
+      "price": "$39 – $59",
+      "sourcing": "$11 – $18",
+      "metric_label": "Search growth MoM",
+      "metric_value": "+312%",
+      "metric_sub": "Copyfy Oct list, ~60% margin",
+      "heat": 66,
+      "delta": "rising",
+      "note": "The biggest search riser on Copyfy's October list built from AliExpress real-time sales, with an estimated 60% gross margin at EUR 39-59 retail. Overheat cut-off in the heating element, a fused 12V plug and E-marking for EU auto accessories are the compliance floor - heated textiles fail inspection on the thermal cutoff more than on anything else."
+    },
+    {
+      "rank": 9,
+      "name": "Cotton Waffle Bath Towel Set",
+      "platform": "temu",
+      "category": "textiles",
+      "origin": "Gaoyang, Hebei",
+      "price": "$35 – $69",
+      "sourcing": "$12 – $24",
+      "metric_label": "Temu Q3 semi-managed GMV share",
+      "metric_value": "47%",
+      "metric_sub": "US traffic halved in Oct",
+      "heat": 68,
+      "delta": "steady",
+      "note": "Carried forward from the October edition - no new product-level Temu data this month. The platform story is the turbulence: semi-managed US traffic fell to less than half of September from mid-October, EU sellers reported drops above 30%, and Q3 semi-managed GMV share reached 47%. Spec-first goods like towels survive channel turbulence better than trend goods; set GSM, yarn and pile height, then wash-test one before bulk."
+    },
+    {
+      "rank": 10,
+      "name": "Foldable Walking Pad Treadmill",
+      "platform": "tiktok_eu",
+      "category": "other",
+      "origin": "Yongkang, Zhejiang",
+      "price": "$159 – $289",
+      "sourcing": "$62 – $105",
+      "metric_label": "TikTok Shop UK rank",
+      "metric_value": "Top 10",
+      "metric_sub": "home fitness, Oct weekly charts",
+      "heat": 64,
+      "delta": "steady",
+      "note": "Back on the UK weekly chart through October as the home-goods season deepened, alongside anti-slip rugs and Shark heating gear. UKCA marking and a UK plug are the obvious items; the motor duty-cycle rating is the one buyers forget to ask for and the one that fails first."
+    },
+    {
+      "rank": 11,
+      "name": "Rechargeable Hand Warmers (2-pack)",
+      "platform": "aliexpress",
+      "category": "other",
+      "origin": "Dongguan, Guangdong",
+      "price": "$29 – $39",
+      "sourcing": "$6 – $11",
+      "metric_label": "Copyfy margin est.",
+      "metric_value": "~68%",
+      "metric_sub": "EUR 29-39 retail",
+      "heat": 63,
+      "delta": "rising",
+      "note": "Copyfy flags October as the last full test window before Black Friday, and this is its textbook SKU: impulse price, six-second demo, light parcel. UN38.3 for the lithium cell, an overheat cut-off near 55 degrees and USB-C port solder survival are the three QC checks; a hand warmer that runs hot is a liability, not a gift."
+    },
+    {
+      "rank": 12,
+      "name": "Baby Electric Nail File Kit",
+      "platform": "tiktok_eu",
+      "category": "other",
+      "origin": "Shenzhen, Guangdong",
+      "price": "$15 – $29",
+      "sourcing": "$3.50 – $6.50",
+      "metric_label": "TikTok Shop UK rank",
+      "metric_value": "#1",
+      "metric_sub": "wk of Oct 12-18",
+      "heat": 60,
+      "delta": "new",
+      "note": "Topped the UK weekly product chart in mid-October, one more proof that the UK chart reads home, baby and motion rather than beauty. EN 71 toy-safety documentation is the baseline, and if the unit is button-cell powered, Reese's Law child-resistant battery compartments apply for the US market - check the battery door screw before shipping either region."
+    }
+  ]
+}
